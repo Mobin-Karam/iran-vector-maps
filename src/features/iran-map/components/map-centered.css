@@ -1,0 +1,1 @@
+.map-layout{grid-template-columns:minmax(0,1fr);max-width:1280px;width:100%;margin-inline:auto}.map-layout .details{display:none}.map-layout .map-card{border-left:0}.map-card{box-shadow:0 14px 38px rgba(23,47,34,.08)}@media(max-width:760px){.map-layout{width:100%}}

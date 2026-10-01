@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.vercel/
+graphify-out/
+*.tgz
+*.tsbuildinfo
+data-source/
+packages/*/node_modules/
+packages/*/dist/

@@ -1,0 +1,1 @@
+.osm-tiles image{opacity:.78}.geo-map path{fill:color-mix(in srgb,var(--region-fill) 58%,transparent)}.dark .osm-tiles image{opacity:.44;filter:grayscale(.25) brightness(.62) contrast(1.15)}footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}

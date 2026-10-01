@@ -1,0 +1,18 @@
+[
+  {
+    "version": "0.2.0",
+    "date": "2026-10-01",
+    "titleFa": "داده و تعامل",
+    "titleEn": "Data and interaction",
+    "itemsFa": ["ورود CSV با ارقام فارسی و عربی", "Tooltip و legend قابل استفاده مجدد", "اعتبارسنجی شناسه و مرز GeoJSON"],
+    "itemsEn": ["CSV import with Persian and Arabic digits", "Reusable tooltip and legend", "GeoJSON boundary and ID validation"]
+  },
+  {
+    "version": "0.1.0",
+    "date": "2026-10-01",
+    "titleFa": "انتشار اولیه",
+    "titleEn": "Initial release",
+    "itemsFa": ["رندر SVG بومی برای Polygon و MultiPolygon", "انتخاب با کیبورد و API داده‌محور", "خروجی SVG و رنگ‌بندی شاخص‌ها"],
+    "itemsEn": ["Native SVG Polygon and MultiPolygon rendering", "Keyboard selection and data-driven API", "SVG export and metric color scales"]
+  }
+]

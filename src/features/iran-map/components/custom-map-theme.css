@@ -1,0 +1,1 @@
+.geo-map path{fill:var(--region-fill);stroke:var(--region-border)}.geo-map path:hover,.geo-map path:focus{fill:var(--region-hover)}.geo-map path.selected{fill:var(--region-selected)}.water-label{fill:var(--water-label)}

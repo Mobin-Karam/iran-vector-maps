@@ -1,0 +1,49 @@
+{
+  "name": "iran-vector-maps",
+  "version": "0.2.0",
+  "description": "Accessible, data-driven SVG administrative maps for React, with first-class Iran support.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "iran",
+    "map",
+    "svg",
+    "geojson",
+    "react",
+    "choropleth",
+    "persian",
+    "rtl"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "./styles.css"
+  ],
+  "files": [
+    "dist",
+    "styles.css",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./styles.css"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "d3-geo": "^3.1.1"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "test": "npm run build && node --test tests/**/*.test.mjs"
+  }
+}

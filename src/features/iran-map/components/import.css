@@ -1,0 +1,1 @@
+.import-button{display:flex;align-items:center;justify-content:center;gap:7px;border:1px dashed #4c8a60;border-radius:7px;padding:10px;color:#276a42;font-weight:700;cursor:pointer}.import-button input{display:none}.import-error{color:#bd3029;line-height:1.6}

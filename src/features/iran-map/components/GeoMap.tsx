@@ -1,0 +1,32 @@
+import { geoIdentity, geoPath } from 'd3-geo'
+import { useEffect, useMemo, useState, type CSSProperties, type PointerEvent } from 'react'
+import type { MapCollection, MapFeatureProperties } from '../model/map.types'
+import type { RegionMetric } from '../model/metric.types'
+import { defaultMapAppearance, type MapAppearance } from '../model/customization'
+import { OsmTileLayer } from './OsmTileLayer'
+import './water.css'
+import './custom-map-theme.css'
+import './osm.css'
+import './metric.css'
+
+interface Props { data: MapCollection; selectedId?: string; onSelect: (id: string) => void; onOpen: (region: MapFeatureProperties) => void; onHover: (region: MapFeatureProperties | null, point?: { x: number; y: number }) => void; appearance?: MapAppearance; ariaLabel?: string; showOsmBasemap?: boolean; metricValues?: ReadonlyMap<string, number> }
+export function GeoMap({ data, selectedId, onSelect, onOpen, onHover, appearance, ariaLabel = 'نقشهٔ تعاملی تقسیمات کشوری ایران', showOsmBasemap = false, metricValues }: Props) {
+  const width = 900; const height = 620
+  const theme = { ...defaultMapAppearance, ...appearance }
+  const style = { '--region-fill': theme.regionFill, '--region-hover': theme.regionHoverFill, '--region-selected': theme.regionSelectedFill, '--region-border': theme.borderColor, '--water-label': theme.waterColor } as CSSProperties
+  const projection = useMemo(() => geoIdentity().reflectY(true).fitExtent([[28, 28], [width - 28, height - 28]], data), [data])
+  const path = useMemo(() => geoPath(projection), [projection]); const caspian = projection([51.8, 38.5]); const gulf = projection([50.4, 27.3])
+  const [localMetrics, setLocalMetrics] = useState<ReadonlyMap<string, number>>(new Map())
+  const hover = (event: PointerEvent<SVGPathElement>, region: MapFeatureProperties) => onHover(region, { x: event.clientX, y: event.clientY })
+  useEffect(() => { const sync = (event: Event) => { const records = (event as CustomEvent<RegionMetric[]>).detail; setLocalMetrics(new Map(records.map((record) => [record.regionId, record.value]))) }; window.addEventListener('iran-map:metrics', sync); return () => window.removeEventListener('iran-map:metrics', sync) }, [])
+  const values = metricValues ?? localMetrics
+  const maximum = Math.max(...values.values(), 1)
+  const metricColors = useMemo(() => new Map([...values].map(([id, value]) => [id, `hsl(${210 - Math.round(value / maximum * 170)} 68% ${74 - Math.round(value / maximum * 28)}%)`])), [values, maximum])
+
+  return <svg className="geo-map" style={style} viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="xMidYMid meet" shapeRendering="geometricPrecision" role="group" aria-label={ariaLabel}>
+    <g>
+      {showOsmBasemap && <OsmTileLayer data={data} project={(longitude, latitude) => projection([longitude, latitude]) ?? [0, 0]} />}{theme.showWaterLabels && <><text className="water-label" x={caspian?.[0]} y={caspian?.[1]}>دریای خزر</text><text className="water-label" x={gulf?.[0]} y={gulf?.[1]}>خلیج فارس</text></>}
+      <g>{data.features.map((region) => { const value = values.get(region.properties.id); const centroid = path.centroid(region); const fill = metricColors.get(region.properties.id); return <g key={region.properties.id}><path style={fill ? { fill } : undefined} d={path(region) ?? undefined} data-region-id={region.properties.id} data-region-level={region.properties.level} aria-label={region.properties.nameFa} role="button" tabIndex={0} className={selectedId === region.properties.id ? 'selected' : ''} onPointerEnter={(event) => hover(event, region.properties)} onPointerLeave={() => onHover(null)} onFocus={() => onHover(region.properties)} onBlur={() => onHover(null)} onClick={() => { onSelect(region.properties.id); onOpen(region.properties) }} onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(region.properties.id); onOpen(region.properties) } }} />{value !== undefined && <text className="metric-label" x={centroid[0]} y={centroid[1]}>{value.toLocaleString('fa-IR')}</text>}</g> })}</g>
+    </g>
+  </svg>
+}

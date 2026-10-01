@@ -1,0 +1,1 @@
+.map-visual{position:relative;flex:1}.map-tooltip{position:absolute;top:18px;right:18px;z-index:4;display:grid;gap:2px;padding:10px 13px;border:1px solid var(--line);border-radius:6px;background:var(--paper);box-shadow:0 8px 24px #0003;font-size:13px;pointer-events:none}.map-tooltip span,.map-tooltip small{color:var(--muted)}
