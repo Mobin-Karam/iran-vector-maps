@@ -73,3 +73,11 @@ Sources, attribution, scope, and known limits are documented in [DATA_SOURCES.md
 ## License
 
 The application and package source code are available under the [MIT License](LICENSE). Geographic data retains the licenses and attribution obligations stated in [DATA_SOURCES.md](DATA_SOURCES.md); those terms can be more restrictive than the source-code license.
+
+## Releases
+
+Every Git tag matching `v*` runs the release workflow. It validates the reusable package, creates the installable `iran-vector-maps-<version>.tgz` artifact, and attaches it to the corresponding GitHub Release. Install a release artifact directly when npm is not part of your delivery flow:
+
+```bash
+npm install https://github.com/Mobin-Karam/iran-vector-maps/releases/download/v0.2.0/iran-vector-maps-0.2.0.tgz
+```
