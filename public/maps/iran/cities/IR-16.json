@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "1404-2026-10-02",
+  "province": {
+    "id": "IR-16",
+    "code": "16",
+    "nameFa": "ایلام"
+  },
+  "cityCount": 28,
+  "geolocatedCount": 24,
+  "cities": [
+    {
+      "id": "IR-CITY-1500",
+      "officialId": 5516,
+      "code": "1500",
+      "nameFa": "ایلام",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "365",
+      "countyNameFa": "ایلام",
+      "districtId": "1345",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.6374,
+      "longitude": 46.4227,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "130802",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2974",
+      "officialId": 5517,
+      "code": "2974",
+      "nameFa": "جعفراباد",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "365",
+      "countyNameFa": "ایلام",
+      "districtId": "1346",
+      "districtNameFa": "سیوان",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-1503",
+      "officialId": 5518,
+      "code": "1503",
+      "nameFa": "دره شهر",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "366",
+      "countyNameFa": "دره شهر",
+      "districtId": "1347",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.14447,
+      "longitude": 47.3799,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "137436",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2849",
+      "officialId": 5519,
+      "code": "2849",
+      "nameFa": "ماژین",
+      "nameEn": "Mazhin",
+      "provinceId": "IR-16",
+      "countyId": "366",
+      "countyNameFa": "دره شهر",
+      "districtId": "1348",
+      "districtNameFa": "ماژین",
+      "latitude": 32.9529715,
+      "longitude": 47.7809572,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q6798519",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2127",
+      "officialId": 5520,
+      "code": "2127",
+      "nameFa": "پهله",
+      "nameEn": "Pahleh",
+      "provinceId": "IR-16",
+      "countyId": "367",
+      "countyNameFa": "دهلران",
+      "districtId": "1349",
+      "districtNameFa": "زرین آباد",
+      "latitude": 33.0105976,
+      "longitude": 46.8792736,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2416549",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1505",
+      "officialId": 5521,
+      "code": "1505",
+      "nameFa": "دهلران",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "367",
+      "countyNameFa": "دهلران",
+      "districtId": "1350",
+      "districtNameFa": "مرکزی",
+      "latitude": 32.6941,
+      "longitude": 47.2679,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "136702",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1506",
+      "officialId": 5522,
+      "code": "1506",
+      "nameFa": "موسیان",
+      "nameEn": "Mousiyan",
+      "provinceId": "IR-16",
+      "countyId": "367",
+      "countyNameFa": "دهلران",
+      "districtId": "1351",
+      "districtNameFa": "موسیان",
+      "latitude": 32.5186816,
+      "longitude": 47.3681008,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150311",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1504",
+      "officialId": 5523,
+      "code": "1504",
+      "nameFa": "میمه",
+      "nameEn": "Maymeh",
+      "provinceId": "IR-16",
+      "countyId": "367",
+      "countyNameFa": "دهلران",
+      "districtId": "1352",
+      "districtNameFa": "سراب میمه",
+      "latitude": 33.2278825,
+      "longitude": 46.9129192,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150312",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1063",
+      "officialId": 5524,
+      "code": "1063",
+      "nameFa": "دشت عباس",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "367",
+      "countyNameFa": "دهلران",
+      "districtId": "1353",
+      "districtNameFa": "دشت عباس",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-1507",
+      "officialId": 5525,
+      "code": "1507",
+      "nameFa": "سرابله",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "368",
+      "countyNameFa": "چرداول",
+      "districtId": "1354",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.76772,
+      "longitude": 46.56578,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "117304",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2850",
+      "officialId": 5526,
+      "code": "2850",
+      "nameFa": "شباب",
+      "nameEn": "Shabab",
+      "provinceId": "IR-16",
+      "countyId": "368",
+      "countyNameFa": "چرداول",
+      "districtId": "1355",
+      "districtNameFa": "شباب",
+      "latitude": 33.748786,
+      "longitude": 46.6322851,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q255889",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2851",
+      "officialId": 5527,
+      "code": "2851",
+      "nameFa": "بلاوه",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "368",
+      "countyNameFa": "چرداول",
+      "districtId": "1356",
+      "districtNameFa": "زاگرس",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2617",
+      "officialId": 5528,
+      "code": "2617",
+      "nameFa": "آسمان آباد",
+      "nameEn": "Aseman Abad",
+      "provinceId": "IR-16",
+      "countyId": "368",
+      "countyNameFa": "چرداول",
+      "districtId": "1357",
+      "districtNameFa": "آسمان آباد",
+      "latitude": 33.8518245,
+      "longitude": 46.4440006,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150304",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1509",
+      "officialId": 5529,
+      "code": "1509",
+      "nameFa": "صالح آباد",
+      "nameEn": "Saleh Abad",
+      "provinceId": "IR-16",
+      "countyId": "369",
+      "countyNameFa": "مهران",
+      "districtId": "1358",
+      "districtNameFa": "صالح آباد",
+      "latitude": 33.4715794,
+      "longitude": 46.1818457,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q432064",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1510",
+      "officialId": 5530,
+      "code": "1510",
+      "nameFa": "مهران",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "369",
+      "countyNameFa": "مهران",
+      "districtId": "1359",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.1222,
+      "longitude": 46.1646,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "124291",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2616",
+      "officialId": 5531,
+      "code": "2616",
+      "nameFa": "مورموری",
+      "nameEn": "Murmuri",
+      "provinceId": "IR-16",
+      "countyId": "370",
+      "countyNameFa": "آبدانان",
+      "districtId": "1360",
+      "districtNameFa": "کلات",
+      "latitude": 32.7254681,
+      "longitude": 47.6674461,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q862390",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1501",
+      "officialId": 5532,
+      "code": "1501",
+      "nameFa": "آبدانان",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "370",
+      "countyNameFa": "آبدانان",
+      "districtId": "1361",
+      "districtNameFa": "مرکزی",
+      "latitude": 32.9926,
+      "longitude": 47.4198,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "145233",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2056",
+      "officialId": 5533,
+      "code": "2056",
+      "nameFa": "سراب باغ",
+      "nameEn": "Sarabbagh",
+      "provinceId": "IR-16",
+      "countyId": "370",
+      "countyNameFa": "آبدانان",
+      "districtId": "1362",
+      "districtNameFa": "سراب باغ",
+      "latitude": 32.8985604,
+      "longitude": 47.5703287,
+      "coordinateStatus": "fuzzy",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q4370969",
+      "matchScore": 0.857,
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2476",
+      "officialId": 5534,
+      "code": "2476",
+      "nameFa": "زرنه",
+      "nameEn": "Zarneh",
+      "provinceId": "IR-16",
+      "countyId": "371",
+      "countyNameFa": "ایوان",
+      "districtId": "1363",
+      "districtNameFa": "زرنه",
+      "latitude": 33.9286369,
+      "longitude": 46.1787556,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q4023890",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1498",
+      "officialId": 5535,
+      "code": "1498",
+      "nameFa": "ایوان",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "371",
+      "countyNameFa": "ایوان",
+      "districtId": "1364",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.8272,
+      "longitude": 46.3097,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "129929",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1508",
+      "officialId": 5536,
+      "code": "1508",
+      "nameFa": "ارکواز",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "372",
+      "countyNameFa": "ملکشاهی",
+      "districtId": "1365",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.3828,
+      "longitude": 46.5983,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "120539",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2028",
+      "officialId": 5537,
+      "code": "2028",
+      "nameFa": "دلگشا",
+      "nameEn": "Delgosha",
+      "provinceId": "IR-16",
+      "countyId": "372",
+      "countyNameFa": "ملکشاهی",
+      "districtId": "1366",
+      "districtNameFa": "گچی",
+      "latitude": 33.4063312,
+      "longitude": 46.589756,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2416536",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2745",
+      "officialId": 5538,
+      "code": "2745",
+      "nameFa": "مهر",
+      "nameEn": "Mehr",
+      "provinceId": "IR-16",
+      "countyId": "372",
+      "countyNameFa": "ملکشاهی",
+      "districtId": "1366",
+      "districtNameFa": "گچی",
+      "latitude": 33.436944,
+      "longitude": 46.461111,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q181785",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2155",
+      "officialId": 5539,
+      "code": "2155",
+      "nameFa": "لومار",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "373",
+      "countyNameFa": "سیروان",
+      "districtId": "1367",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.56522,
+      "longitude": 46.814,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "401555",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1502",
+      "officialId": 5540,
+      "code": "1502",
+      "nameFa": "بدره",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "374",
+      "countyNameFa": "بدره",
+      "districtId": "1369",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.30573,
+      "longitude": 47.03708,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "415694",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2909",
+      "officialId": 5541,
+      "code": "2909",
+      "nameFa": "چشمه شیرین",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "374",
+      "countyNameFa": "بدره",
+      "districtId": "1370",
+      "districtNameFa": "هندمینی",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2574",
+      "officialId": 5542,
+      "code": "2574",
+      "nameFa": "توحید",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "375",
+      "countyNameFa": "هلیلان",
+      "districtId": "1371",
+      "districtNameFa": "مرکزی",
+      "latitude": 27.82775,
+      "longitude": 52.85789,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "8298952",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1499",
+      "officialId": 5543,
+      "code": "1499",
+      "nameFa": "چوار",
+      "nameEn": null,
+      "provinceId": "IR-16",
+      "countyId": "376",
+      "countyNameFa": "چوار",
+      "districtId": "1373",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.6953,
+      "longitude": 46.2979,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "138905",
+      "renderLabelDefault": true
+    }
+  ]
+}
