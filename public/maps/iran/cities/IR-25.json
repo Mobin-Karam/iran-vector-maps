@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "1404-2026-10-02",
+  "province": {
+    "id": "IR-25",
+    "code": "25",
+    "nameFa": "قم"
+  },
+  "cityCount": 7,
+  "geolocatedCount": 6,
+  "cities": [
+    {
+      "id": "IR-CITY-2515",
+      "officialId": 5818,
+      "code": "2515",
+      "nameFa": "دستجرد",
+      "nameEn": "Dastjerd",
+      "provinceId": "IR-25",
+      "countyId": "465",
+      "countyNameFa": "قم",
+      "districtId": "1592",
+      "districtNameFa": "خلجستان",
+      "latitude": 34.5538073,
+      "longitude": 50.2390622,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2423386",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1114",
+      "officialId": 5819,
+      "code": "1114",
+      "nameFa": "قم",
+      "nameEn": null,
+      "provinceId": "IR-25",
+      "countyId": "465",
+      "countyNameFa": "قم",
+      "districtId": "1593",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.6401,
+      "longitude": 50.8764,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "119208",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2516",
+      "officialId": 5820,
+      "code": "2516",
+      "nameFa": "قنوات",
+      "nameEn": "Qanavat",
+      "provinceId": "IR-25",
+      "countyId": "465",
+      "countyNameFa": "قم",
+      "districtId": "1593",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.6123358,
+      "longitude": 51.0136627,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2633385",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2027",
+      "officialId": 5821,
+      "code": "2027",
+      "nameFa": "سلفچگان",
+      "nameEn": "Salafchegan",
+      "provinceId": "IR-25",
+      "countyId": "465",
+      "countyNameFa": "قم",
+      "districtId": "1594",
+      "districtNameFa": "سلفچگان",
+      "latitude": 34.476606,
+      "longitude": 50.4550123,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q75574",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2274",
+      "officialId": 5822,
+      "code": "2274",
+      "nameFa": "جعفریه",
+      "nameEn": null,
+      "provinceId": "IR-25",
+      "countyId": "466",
+      "countyNameFa": "جعفرآباد",
+      "districtId": "1595",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.7747,
+      "longitude": 50.5169,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "133677",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1062",
+      "officialId": 5823,
+      "code": "1062",
+      "nameFa": "قاهان",
+      "nameEn": null,
+      "provinceId": "IR-25",
+      "countyId": "466",
+      "countyNameFa": "جعفرآباد",
+      "districtId": "1596",
+      "districtNameFa": "قاهان",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2275",
+      "officialId": 5824,
+      "code": "2275",
+      "nameFa": "کهک",
+      "nameEn": null,
+      "provinceId": "IR-25",
+      "countyId": "467",
+      "countyNameFa": "کهک",
+      "districtId": "1597",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.3938,
+      "longitude": 50.8643,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "122026",
+      "renderLabelDefault": true
+    }
+  ]
+}
