@@ -6,7 +6,8 @@ export function createMapColorScale(values: Iterable<number>, options: MapColorS
   const maximum = options.maximum ?? Math.max(...finite, 1)
   const palette = options.colors ?? []
   const classification: MapClassification = options.classification ?? 'continuous'
-  const breaks = options.breaks ?? (classification === 'equal-interval' && palette.length > 1 ? Array.from({ length: palette.length - 1 }, (_, index) => minimum + ((maximum - minimum) * (index + 1)) / palette.length) : [])
+  const sorted = [...finite].sort((left, right) => left - right)
+  const breaks = options.breaks ?? (classification === 'equal-interval' && palette.length > 1 ? Array.from({ length: palette.length - 1 }, (_, index) => minimum + ((maximum - minimum) * (index + 1)) / palette.length) : classification === 'quantile' && palette.length > 1 ? Array.from({ length: palette.length - 1 }, (_, index) => sorted[Math.min(sorted.length - 1, Math.ceil(((index + 1) * sorted.length) / palette.length) - 1)] ?? maximum) : [])
 
   return (value: number | undefined) => {
     if (value === undefined || !Number.isFinite(value)) return options.noData ?? '#dce9dd'

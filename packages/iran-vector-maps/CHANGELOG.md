@@ -2,6 +2,12 @@
 
 This changelog follows the package version in `package.json`. Unreleased changes belong under a future version heading and are not advertised as published until `npm publish` succeeds.
 
+## 0.3.1 — 2026-10-02
+
+- Added quantile classification and map marker/annotation points.
+- Extended browser coverage to JSON import and SVG export.
+- Added real-world data contracts and use-case guidance.
+
 ## 0.3.0 — 2026-10-02
 
 - Added threshold and equal-interval choropleth classification through `createMapColorScale`.

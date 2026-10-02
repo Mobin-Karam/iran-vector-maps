@@ -10,7 +10,7 @@ function valueFor(values: IranAdminSvgMapProps['values'], id: string) {
   return values instanceof Map ? values.get(id) : (values as Readonly<Record<string, number>>)[id]
 }
 
-export function IranAdminSvgMap<P extends MapRegionProperties>({ data, values, selectedId, className, style, ariaLabel = 'نقشهٔ اداری ایران', height = 620, padding = 28, showValues = true, labelMinArea = 0, emptyState, colorScale, valueFormatter = (value) => value.toLocaleString('fa-IR'), getFill, onRegionClick, onRegionHover }: IranAdminSvgMapProps<P>) {
+export function IranAdminSvgMap<P extends MapRegionProperties>({ data, values, selectedId, className, style, ariaLabel = 'نقشهٔ اداری ایران', height = 620, padding = 28, showValues = true, labelMinArea = 0, markers = [], emptyState, colorScale, valueFormatter = (value) => value.toLocaleString('fa-IR'), getFill, onRegionClick, onRegionHover, onMarkerClick }: IranAdminSvgMapProps<P>) {
   const width = 900
   const [hoveredId, setHoveredId] = useState<string>()
   const projection = useMemo(() => geoIdentity().reflectY(true).fitExtent([[padding, padding], [width - padding, height - padding]], data), [data, height, padding])
@@ -37,6 +37,11 @@ export function IranAdminSvgMap<P extends MapRegionProperties>({ data, values, s
         <path d={path(feature) ?? undefined} style={fill ? { fill } : undefined} data-region-id={region.id} role="button" tabIndex={0} aria-label={region.nameFa} aria-pressed={isSelected} className={hoveredId === region.id ? 'is-hovered' : undefined} onPointerEnter={(event) => pointerEnter(event, region)} onPointerMove={(event) => onRegionHover?.(region, { region, clientX: event.clientX, clientY: event.clientY })} onPointerLeave={() => { setHoveredId(undefined); onRegionHover?.(null) }} onFocus={() => { setHoveredId(region.id); onRegionHover?.(region) }} onBlur={() => { setHoveredId(undefined); onRegionHover?.(null) }} onClick={() => activate(region)} onKeyDown={(event) => keyActivate(event, region)} />
         {showValues && value !== undefined && path.area(feature) >= labelMinArea && <text className="iran-admin-svg-map__value" x={centroid[0]} y={centroid[1]} aria-hidden="true">{valueFormatter(value, region)}</text>}
       </g>
+    })}
+    {markers.map((marker) => {
+      const position = projection([marker.longitude, marker.latitude])
+      if (!position) return null
+      return <g key={marker.id} className="iran-admin-svg-map__marker"><circle cx={position[0]} cy={position[1]} r={marker.radius ?? 5} fill={marker.color ?? '#dc2626'} role={onMarkerClick ? 'button' : undefined} tabIndex={onMarkerClick ? 0 : undefined} aria-label={marker.label} onClick={() => onMarkerClick?.(marker)} onKeyDown={(event) => { if (onMarkerClick && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); onMarkerClick(marker) } }} />{marker.label && <text x={position[0]} y={position[1] - (marker.radius ?? 5) - 5} aria-hidden="true">{marker.label}</text>}</g>
     })}
   </svg>
 }

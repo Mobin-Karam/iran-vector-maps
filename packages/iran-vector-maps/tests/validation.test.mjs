@@ -32,3 +32,9 @@ test('classifies dashboard values with stable threshold colors', () => {
   assert.equal(fill(40), '#60a5fa')
   assert.equal(fill(90), '#1d4ed8')
 })
+
+test('derives deterministic quantile breaks from supplied values', () => {
+  const fill = createMapColorScale([1, 2, 3, 100], { classification: 'quantile', colors: ['#f8fafc', '#94a3b8'] })
+  assert.equal(fill(1), '#f8fafc')
+  assert.equal(fill(100), '#94a3b8')
+})

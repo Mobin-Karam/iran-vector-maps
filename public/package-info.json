@@ -1,8 +1,24 @@
 {
   "name": "iran-vector-maps",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Accessible, data-driven SVG administrative maps for React, with first-class Iran support.",
   "releases": [
+    {
+      "version": "0.3.1",
+      "date": "2026-10-02",
+      "titleFa": "نقشه‌های عملیاتی",
+      "titleEn": "Operational maps",
+      "itemsFa": [
+        "رنگ‌بندی quantile",
+        "نشانگر و annotation مکانی",
+        "آزمون ورود JSON و خروجی SVG"
+      ],
+      "itemsEn": [
+        "Quantile color scales",
+        "Geographic markers and annotations",
+        "JSON import and SVG export browser tests"
+      ]
+    },
     {
       "version": "0.3.0",
       "date": "2026-10-02",

@@ -2,5 +2,5 @@
   "name": "iran-vector-maps-remix-example",
   "private": true,
   "scripts": { "dev": "remix vite:dev", "build": "remix vite:build", "start": "remix-serve ./build/server/index.js" },
-  "dependencies": { "@remix-run/dev": "^2.17.0", "@remix-run/node": "^2.17.0", "@remix-run/react": "^2.17.0", "@remix-run/serve": "^2.17.0", "iran-vector-maps": "^0.3.0", "react": "^19.2.8", "react-dom": "^19.2.8", "vite": "^8.3.1" }
+  "dependencies": { "@remix-run/dev": "^2.17.0", "@remix-run/node": "^2.17.0", "@remix-run/react": "^2.17.0", "@remix-run/serve": "^2.17.0", "iran-vector-maps": "^0.3.1", "react": "^19.2.8", "react-dom": "^19.2.8", "vite": "^8.3.1" }
 }

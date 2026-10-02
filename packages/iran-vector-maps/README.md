@@ -49,6 +49,7 @@ Each feature must have `properties.id` and `properties.nameFa`. `nameEn`, `level
 - Keyboard selection with Enter and Space, visible focus state, and aria labels.
 - Controlled selection, hover callback, per-region values, Persian number formatting, and default choropleth colors.
 - Continuous, threshold, and equal-interval scales with custom palettes and explicit break values.
+- Quantile classification, optional small-region label suppression, and marker/annotation points for facilities or events.
 - `labelMinArea` to hide values where the available polygon space is too small.
 - `IranMapLegend` for metric explanation, and configurable no-data / color-scale hues.
 - CSV metric parsing with Persian/Arabic digit support and unknown-region detection.

@@ -22,3 +22,15 @@ test('data workspace imports a valid CSV and closes as a real modal', async ({ p
   await page.getByLabel('بستن').click()
   await expect(page.getByRole('dialog')).toHaveCount(0)
 })
+
+test('data workspace imports JSON and exports valid SVG', async ({ page }) => {
+  await page.goto('map')
+  await page.getByLabel('مدیریت داده‌های نقشه').click()
+  await page.locator('input[type="file"]').first().setInputFiles({ name: 'metrics.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify([{ regionId: 'IR-05', labelFa: 'نمونه', value: 77, source: 'test' }])) })
+  await expect(page.locator('.metric-label')).toContainText('۷۷')
+  await page.getByLabel('بستن').click()
+  await page.getByLabel('رنگ و خروجی').click()
+  const download = page.waitForEvent('download')
+  await page.getByRole('button', { name: 'دریافت SVG' }).click()
+  expect((await download).suggestedFilename()).toBe('iran-administrative-map.svg')
+})

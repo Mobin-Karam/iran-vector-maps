@@ -23,7 +23,17 @@ export interface MapFeatureCollection<P extends MapRegionProperties = MapRegionP
 }
 
 export type MapValueMap = ReadonlyMap<string, number> | Record<string, number>
-export type MapClassification = 'continuous' | 'equal-interval' | 'threshold'
+export type MapClassification = 'continuous' | 'quantile' | 'equal-interval' | 'threshold'
+
+export interface MapMarker {
+  id: string
+  longitude: number
+  latitude: number
+  label?: string
+  color?: string
+  radius?: number
+  [key: string]: unknown
+}
 
 export interface MapRegionInteraction<P extends MapRegionProperties = MapRegionProperties> {
   region: P
@@ -55,12 +65,14 @@ export interface IranAdminSvgMapProps<P extends MapRegionProperties = MapRegionP
   padding?: number
   showValues?: boolean
   labelMinArea?: number
+  markers?: readonly MapMarker[]
   emptyState?: ReactNode
   colorScale?: MapColorScale
   valueFormatter?: (value: number, region: P) => string
   getFill?: (region: P, value: number | undefined, maximum: number) => string | undefined
   onRegionClick?: (region: P) => void
   onRegionHover?: (region: P | null, interaction?: MapRegionInteraction<P>) => void
+  onMarkerClick?: (marker: MapMarker) => void
 }
 
 export interface MapDataValidationIssue { path: string; message: string }

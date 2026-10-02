@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.3.1",
+    "date": "2026-10-02",
+    "titleFa": "نقشه‌های عملیاتی",
+    "titleEn": "Operational maps",
+    "itemsFa": ["رنگ‌بندی quantile", "نشانگر و annotation مکانی", "آزمون ورود JSON و خروجی SVG"],
+    "itemsEn": ["Quantile color scales", "Geographic markers and annotations", "JSON import and SVG export browser tests"]
+  },
+  {
     "version": "0.3.0",
     "date": "2026-10-02",
     "titleFa": "اعتماد و نقشه‌های داده‌ای",
