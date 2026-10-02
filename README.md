@@ -52,7 +52,7 @@ Static hosts need an SPA fallback to `index.html` for deep map URLs. The include
 ## What is included
 
 - Native, keyboard-accessible SVG rendering for `Polygon` and `MultiPolygon` geometry.
-- 31 province maps and county layers loaded on demand from static TopoJSON.
+- 31 province maps and county layers loaded on demand from static TopoJSON, plus 1,481 city records with 1,154 sourced point markers.
 - Stable region IDs, Persian/English names, tooltips, search, and province-to-county navigation.
 - JSON and CSV metric import with validation, color scales, value labels, legend, and unknown-ID reporting.
 - Host-controlled theme, colors, selection, details, and SVG export; the demo also offers PNG export.

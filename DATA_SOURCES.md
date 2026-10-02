@@ -47,3 +47,12 @@ The companion `iran-vector-maps-data` package exposes versioned URLs for these g
 - **Original format:** JSON generated from a stated official administrative-divisions source through year 1404
 - **Processing:** Province/county parent IDs are used to create authoritative child counts and to match SVG county files to the correct province.
 - **Known limitations:** It provides administrative metadata and relationships, not boundary polygons. City/district detail is displayed as metadata until independently verifiable geometry is added.
+
+## City point locations
+
+- **Name:** Iran city-location dataset
+- **Location:** `public/maps/iran/cities/IR-00.json` through `IR-30.json`
+- **Administrative coverage:** 1,481 city names across all 31 provinces and 484 counties
+- **Processing:** The city hierarchy is preserved with province and county IDs. A marker is rendered only when a record has a non-unresolved coordinate status and numeric longitude/latitude.
+- **Coordinate provenance:** Each record keeps its own `coordinateSources` field. The current dataset contains verified or corroborated point locations from its cited source records.
+- **Known limitations:** These are city reference points, not city-boundary polygons. Records marked `unresolved` stay in the asset for completeness but are not placed on the map.
