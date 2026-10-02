@@ -17,9 +17,9 @@ export function GeoMap({ data, selectedId, onSelect, onOpen, onHover, onCityHove
   const style = { '--region-fill': theme.regionFill, '--region-hover': theme.regionHoverFill, '--region-selected': theme.regionSelectedFill, '--region-border': theme.borderColor, '--water-label': theme.waterColor } as CSSProperties
   const projection = useMemo(() => geoIdentity().reflectY(true).fitExtent([[28, 28], [width - 28, height - 28]], data), [data])
   const path = useMemo(() => geoPath(projection), [projection]); const caspian = projection([51.8, 38.5]); const gulf = projection([50.4, 27.3])
-  const [localMetrics, setLocalMetrics] = useState<ReadonlyMap<string, number>>(new Map())
+  const [localMetrics, setLocalMetrics] = useState<ReadonlyMap<string, number>>(() => new Map(((window as typeof window & { __iranMapMetrics?: RegionMetric[] }).__iranMapMetrics ?? []).map((record) => [record.regionId, record.value])))
   const hover = (event: PointerEvent<SVGPathElement>, region: MapFeatureProperties) => onHover(region, { x: event.clientX, y: event.clientY })
-  useEffect(() => { if (!listenForMetrics) return; const sync = (event: Event) => { const records = (event as CustomEvent<RegionMetric[]>).detail; setLocalMetrics(new Map(records.map((record) => [record.regionId, record.value]))) }; window.addEventListener('iran-map:metrics', sync); return () => window.removeEventListener('iran-map:metrics', sync) }, [listenForMetrics])
+  useEffect(() => { if (!listenForMetrics) return; const sync = (event: Event) => { const records = (event as CustomEvent<RegionMetric[]>).detail; setLocalMetrics(new Map(records.map((record) => [record.regionId, record.value]))) }; sync({ detail: (window as typeof window & { __iranMapMetrics?: RegionMetric[] }).__iranMapMetrics ?? [] } as CustomEvent<RegionMetric[]>); window.addEventListener('iran-map:metrics', sync); return () => window.removeEventListener('iran-map:metrics', sync) }, [listenForMetrics])
   const values = metricValues ?? localMetrics
   const maximum = Math.max(...values.values(), 1)
   const metricColors = useMemo(() => new Map([...values].map(([id, value]) => [id, `hsl(${210 - Math.round(value / maximum * 170)} 68% ${74 - Math.round(value / maximum * 28)}%)`])), [values, maximum])

@@ -2,6 +2,10 @@
 
 This changelog follows the package version in `package.json`. Unreleased changes belong under a future version heading and are not advertised as published until `npm publish` succeeds.
 
+## 0.5.2 — 2026-10-02
+
+- Preserved active imported metrics across asynchronous map-layer mounting, including slow browser and CI starts.
+
 ## 0.5.1 — 2026-10-02
 
 - Made imported metrics publish synchronously to the active SVG layer, fixing parallel browser test and slow-render timing.
