@@ -11,7 +11,7 @@ const links = [
   { to: '/package', label: 'بسته' },
 ]
 
-export function SiteChrome({ children, className = '' }: { children: ReactNode; className?: string }) {
+export function SiteChrome({ children, className = '', showFooter = true }: { children: ReactNode; className?: string; showFooter?: boolean }) {
   const location = useLocation()
   return <div className={`site-shell ${className}`} dir="rtl">
     <header className="site-header">
@@ -24,6 +24,6 @@ export function SiteChrome({ children, className = '' }: { children: ReactNode; 
       </div>
     </header>
     {children}
-    <footer className="site-footer"><span>مرزهای اداری و نقاط شهر با منبع و وضعیت اعتبارسنجی مشخص می‌شوند.</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">© OpenStreetMap</a></footer>
+    {showFooter && <footer className="site-footer"><span>مرزهای اداری و نقاط شهر با منبع و وضعیت اعتبارسنجی مشخص می‌شوند.</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">© OpenStreetMap</a></footer>}
   </div>
 }

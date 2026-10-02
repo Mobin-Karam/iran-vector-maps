@@ -32,3 +32,18 @@ export async function fetchIranProvinceAsset<T>(provinceId: IranProvinceId, asse
   if (!response.ok) throw new Error(`Unable to load ${provinceId} ${asset}: ${response.status}`)
   return response.json() as Promise<T>
 }
+
+/**
+ * Loads a province topology and returns one county feature, so consumers can
+ * work with a single county without maintaining their own lookup table.
+ */
+export async function fetchIranCountyFeature<T = unknown>(provinceId: IranProvinceId, countyId: string, fetcher: typeof fetch = fetch): Promise<T> {
+  const topology = await fetchIranProvinceAsset<{ objects?: Record<string, unknown> }>(provinceId, 'counties.topo.json', fetcher)
+  const object = topology.objects && Object.values(topology.objects)[0]
+  if (!object) throw new Error(`Unable to read county topology for ${provinceId}`)
+  const { feature } = await import('topojson-client')
+  const collection = feature(topology as never, object as never) as { features?: Array<{ properties?: { id?: string } }> }
+  const county = collection.features?.find((item) => item.properties?.id === countyId)
+  if (!county) throw new Error(`County ${countyId} was not found in ${provinceId}`)
+  return county as T
+}

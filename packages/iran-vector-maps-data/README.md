@@ -30,6 +30,18 @@ const cityPoints = await fetchIranProvinceAsset(provinceId, 'cities.json')
 
 `iranProvinceIds` lists all 31 installable province IDs. Each individual city asset retains city name, county relationship, coordinate status, and coordinate sources. Use city points as reference markers, never as city-boundary geometry.
 
+## Load one county
+
+County geometry remains verified and versioned with its province topology; this avoids publishing hundreds of tiny packages with duplicated metadata. Use the stable county ID from the map manifest to resolve only the feature your screen needs:
+
+```ts
+import { fetchIranCountyFeature } from 'iran-vector-maps-data/province'
+
+const county = await fetchIranCountyFeature('IR-05', 'IR-05-county-...')
+```
+
+The interactive demo copies the precise province or county snippet for any selected region.
+
 ## Coverage
 
 - Provinces: 31/31, polygon geometry.

@@ -16,4 +16,4 @@ export async function fetchIranMapAsset<T>(path: Parameters<typeof iranMapAssetU
   return response.json() as Promise<T>
 }
 
-export { fetchIranProvinceAsset, iranProvinceAssetUrl, iranProvinceAssets, iranProvinceIds, isIranProvinceId, type IranProvinceAsset, type IranProvinceId } from './province.js'
+export { fetchIranCountyFeature, fetchIranProvinceAsset, iranProvinceAssetUrl, iranProvinceAssets, iranProvinceIds, isIranProvinceId, type IranProvinceAsset, type IranProvinceId } from './province.js'

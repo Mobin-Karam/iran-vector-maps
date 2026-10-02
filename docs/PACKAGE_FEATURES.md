@@ -13,6 +13,8 @@ The npm package is `iran-vector-maps`. It is designed for React applications and
 - CSV metrics adapter with quoted-cell parsing, localized digit support, duplicate-row reporting, and unknown-region checks.
 - Explicitly no tracking, GPS, remote tiles, iframe, canvas, or router dependency.
 - Immutable record adapters for React Query, SWR, loaders, and other host-owned data caches without taking a query-library dependency.
+- Separate `iran-vector-maps-data/province` helpers for one province or a resolved county feature, with stable IDs.
+- Demo workbench with a reusable site header, responsive secondary map toolbar, scoped region install snippets, local metric workspaces, custom SVG/PNG output, and active metric selection.
 
 ## Deliberately host-owned
 

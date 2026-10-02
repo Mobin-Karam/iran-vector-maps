@@ -2,6 +2,13 @@
 
 This changelog follows the package version in `package.json`. Unreleased changes belong under a future version heading and are not advertised as published until `npm publish` succeeds.
 
+## 0.5.0 — 2026-10-02
+
+- Added the responsive global site header and dedicated map workbench toolbar.
+- Added exact copyable province and county data-loading snippets in the map details panel.
+- Scoped custom color and SVG/PNG export to the active Iran, province, or county map.
+- Improved the local JSON/CSV workspace with merge/replace importing, localized number input, upsert behavior, active metrics, validation feedback, and accessible modal lifecycle.
+
 ## 0.3.2 — 2026-10-02
 
 - Added immutable value adapters for React Query, SWR, and loader results.

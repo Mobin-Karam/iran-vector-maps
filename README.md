@@ -45,6 +45,18 @@ const cities = await fetchIranProvinceAsset(province, 'cities.json')
 
 All 31 IDs are available through `iranProvinceIds`. Province city assets are point records with their source status; they are not city-boundary polygons.
 
+## Load one county on demand
+
+Counties are addressed by their stable IDs inside the verified province topology. The data package returns one GeoJSON feature, so an application can keep its own route and bundle scoped to that county without creating hundreds of unrelated npm packages.
+
+```ts
+import { fetchIranCountyFeature } from 'iran-vector-maps-data/province'
+
+const kermanshah = await fetchIranCountyFeature('IR-05', 'IR-05-county-...')
+```
+
+In the demo, select a province or county and use **«کپی دستور استفاده»** to copy the exact, valid command for the selected region. The download menu exports the current full-Iran, province, or county SVG/PNG with the colors selected by the user.
+
 ## Run the demo locally
 
 ```bash
@@ -70,7 +82,7 @@ Static hosts need an SPA fallback to `index.html` for deep map URLs. The include
 - 31 province maps and county layers loaded on demand from static TopoJSON, plus 1,481 city records with 1,154 sourced point markers.
 - The `iran-vector-maps-data/province` entry point for installing the data companion once and loading any one province on demand.
 - Stable region IDs, Persian/English names, tooltips, search, and province-to-county navigation.
-- JSON and CSV metric import with validation, color scales, value labels, legend, and unknown-ID reporting.
+- JSON and CSV metric import with validation, merge/replace behavior, local persistence, active-metric selection, color scales, value labels, legend, and unknown-ID reporting.
 - Host-controlled theme, colors, selection, details, and SVG export; the demo also offers PNG export.
 - A compact package suitable for dashboards, reporting, public services, research, health, education, logistics, sales territories, and any regional dataset.
 
@@ -105,5 +117,5 @@ The application and package source code are available under the [MIT License](LI
 Every Git tag matching `v*` runs the release workflow. It validates the reusable package, creates the installable `iran-vector-maps-<version>.tgz` artifact, and attaches it to the corresponding GitHub Release. Install a release artifact directly when npm is not part of your delivery flow:
 
 ```bash
-npm install https://github.com/Mobin-Karam/iran-vector-maps/releases/download/v0.4.1/iran-vector-maps-0.4.1.tgz
+npm install https://github.com/Mobin-Karam/iran-vector-maps/releases/download/v0.5.0/iran-vector-maps-0.5.0.tgz
 ```
