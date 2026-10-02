@@ -1,0 +1,691 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "1404-2026-10-02",
+  "province": {
+    "id": "IR-00",
+    "code": "00",
+    "nameFa": "مرکزی"
+  },
+  "cityCount": 34,
+  "geolocatedCount": 33,
+  "cities": [
+    {
+      "id": "IR-CITY-1101",
+      "officialId": 4487,
+      "code": "1101",
+      "nameFa": "اراک",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "33",
+      "countyNameFa": "اراک",
+      "districtId": "517",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.09493,
+      "longitude": 49.69809,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "143127",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2536",
+      "officialId": 4488,
+      "code": "2536",
+      "nameFa": "داودآباد",
+      "nameEn": "Davoud Abad",
+      "provinceId": "IR-00",
+      "countyId": "33",
+      "countyNameFa": "اراک",
+      "districtId": "517",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.2952133,
+      "longitude": 49.8466444,
+      "coordinateStatus": "fuzzy",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150953",
+      "matchScore": 0.889,
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2074",
+      "officialId": 4489,
+      "code": "2074",
+      "nameFa": "ساروق",
+      "nameEn": "Saroogh",
+      "provinceId": "IR-00",
+      "countyId": "33",
+      "countyNameFa": "اراک",
+      "districtId": "518",
+      "districtNameFa": "ساروق",
+      "latitude": 34.4118836,
+      "longitude": 49.4946956,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150954",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1600",
+      "officialId": 4490,
+      "code": "1600",
+      "nameFa": "کارچان",
+      "nameEn": "Karchan",
+      "provinceId": "IR-00",
+      "countyId": "33",
+      "countyNameFa": "اراک",
+      "districtId": "519",
+      "districtNameFa": "معصومیه",
+      "latitude": 34.0994117,
+      "longitude": 49.9286019,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q6368993",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1103",
+      "officialId": 4491,
+      "code": "1103",
+      "nameFa": "آشتیان",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "34",
+      "countyNameFa": "آشتیان",
+      "districtId": "520",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.52298,
+      "longitude": 50.00608,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "142744",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1104",
+      "officialId": 4492,
+      "code": "1104",
+      "nameFa": "تفرش",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "35",
+      "countyNameFa": "تفرش",
+      "districtId": "521",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.69307,
+      "longitude": 50.01601,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "113636",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1105",
+      "officialId": 4493,
+      "code": "1105",
+      "nameFa": "خمین",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "36",
+      "countyNameFa": "خمین",
+      "districtId": "522",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.63889,
+      "longitude": 50.08003,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "127403",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2541",
+      "officialId": 4494,
+      "code": "2541",
+      "nameFa": "قورچی باشی",
+      "nameEn": "Ghurchi Bashi",
+      "provinceId": "IR-00",
+      "countyId": "36",
+      "countyNameFa": "خمین",
+      "districtId": "523",
+      "districtNameFa": "کمره",
+      "latitude": 33.6753987,
+      "longitude": 49.8753977,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150957",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1106",
+      "officialId": 4495,
+      "code": "1106",
+      "nameFa": "دلیجان",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "37",
+      "countyNameFa": "دلیجان",
+      "districtId": "524",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.9905,
+      "longitude": 50.6838,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "136399",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1107",
+      "officialId": 4496,
+      "code": "1107",
+      "nameFa": "نراق",
+      "nameEn": "Naragh",
+      "provinceId": "IR-00",
+      "countyId": "37",
+      "countyNameFa": "دلیجان",
+      "districtId": "524",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.0103896,
+      "longitude": 50.8314871,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q644686",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1110",
+      "officialId": 4497,
+      "code": "1110",
+      "nameFa": "ساوه",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "38",
+      "countyNameFa": "ساوه",
+      "districtId": "525",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.0213,
+      "longitude": 50.3566,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "116667",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2827",
+      "officialId": 4498,
+      "code": "2827",
+      "nameFa": "آوه",
+      "nameEn": "Aveh",
+      "provinceId": "IR-00",
+      "countyId": "38",
+      "countyNameFa": "ساوه",
+      "districtId": "525",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.8037213,
+      "longitude": 50.4072045,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q16263360",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1111",
+      "officialId": 4499,
+      "code": "1111",
+      "nameFa": "غرق آباد",
+      "nameEn": "Gharqabad",
+      "provinceId": "IR-00",
+      "countyId": "38",
+      "countyNameFa": "ساوه",
+      "districtId": "526",
+      "districtNameFa": "نوبران",
+      "latitude": 35.1082178,
+      "longitude": 49.8218393,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2423620",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2137",
+      "officialId": 4500,
+      "code": "2137",
+      "nameFa": "نوبران",
+      "nameEn": "Nowbaran",
+      "provinceId": "IR-00",
+      "countyId": "38",
+      "countyNameFa": "ساوه",
+      "districtId": "526",
+      "districtNameFa": "نوبران",
+      "latitude": 35.1311747,
+      "longitude": 49.7007001,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q1115416",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1112",
+      "officialId": 4501,
+      "code": "1112",
+      "nameFa": "آستانه",
+      "nameEn": "Astaneh",
+      "provinceId": "IR-00",
+      "countyId": "39",
+      "countyNameFa": "شازند",
+      "districtId": "527",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.890833,
+      "longitude": 49.357778,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q4810535",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1113",
+      "officialId": 4502,
+      "code": "1113",
+      "nameFa": "شازند",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "39",
+      "countyNameFa": "شازند",
+      "districtId": "527",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.93132,
+      "longitude": 49.40629,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "142567",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2380",
+      "officialId": 4503,
+      "code": "2380",
+      "nameFa": "هندودر",
+      "nameEn": "Hendoudar",
+      "provinceId": "IR-00",
+      "countyId": "39",
+      "countyNameFa": "شازند",
+      "districtId": "528",
+      "districtNameFa": "سربند",
+      "latitude": 33.7809931,
+      "longitude": 49.226625,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150972",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2582",
+      "officialId": 4504,
+      "code": "2582",
+      "nameFa": "توره",
+      "nameEn": "Tureh",
+      "provinceId": "IR-00",
+      "countyId": "39",
+      "countyNameFa": "شازند",
+      "districtId": "529",
+      "districtNameFa": "زالیان",
+      "latitude": 34.0444097,
+      "longitude": 49.2837667,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2421130",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2774",
+      "officialId": 4505,
+      "code": "2774",
+      "nameFa": "شهباز",
+      "nameEn": "Shahbaz",
+      "provinceId": "IR-00",
+      "countyId": "39",
+      "countyNameFa": "شازند",
+      "districtId": "530",
+      "districtNameFa": "قره کهریز",
+      "latitude": 33.9354129,
+      "longitude": 49.3356919,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2276403",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2032",
+      "officialId": 4506,
+      "code": "2032",
+      "nameFa": "مهاجران",
+      "nameEn": "Mohajeran",
+      "provinceId": "IR-00",
+      "countyId": "39",
+      "countyNameFa": "شازند",
+      "districtId": "531",
+      "districtNameFa": "مهاجران",
+      "latitude": 34.0493146,
+      "longitude": 49.4174479,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q720705",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1115",
+      "officialId": 4507,
+      "code": "1115",
+      "nameFa": "محلات",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "40",
+      "countyNameFa": "محلات",
+      "districtId": "532",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.91108,
+      "longitude": 50.45317,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "125438",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1116",
+      "officialId": 4508,
+      "code": "1116",
+      "nameFa": "نیمور",
+      "nameEn": "Nimvar",
+      "provinceId": "IR-00",
+      "countyId": "40",
+      "countyNameFa": "محلات",
+      "districtId": "532",
+      "districtNameFa": "مرکزی",
+      "latitude": 33.8864747,
+      "longitude": 50.5631053,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2621665",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2378",
+      "officialId": 4509,
+      "code": "2378",
+      "nameFa": "رازقان",
+      "nameEn": "Razeqan",
+      "provinceId": "IR-00",
+      "countyId": "41",
+      "countyNameFa": "زرندیه",
+      "districtId": "533",
+      "districtNameFa": "خرقان",
+      "latitude": 35.3307678,
+      "longitude": 49.9511755,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q4363865",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1109",
+      "officialId": 4510,
+      "code": "1109",
+      "nameFa": "مامونیه",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "41",
+      "countyNameFa": "زرندیه",
+      "districtId": "534",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.30454,
+      "longitude": 50.49934,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "6657461",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2017",
+      "officialId": 4511,
+      "code": "2017",
+      "nameFa": "خشکرود",
+      "nameEn": "Khoshkrud",
+      "provinceId": "IR-00",
+      "countyId": "41",
+      "countyNameFa": "زرندیه",
+      "districtId": "534",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.395262,
+      "longitude": 50.328927,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q6402495",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2228",
+      "officialId": 4512,
+      "code": "2228",
+      "nameFa": "پرندک",
+      "nameEn": "Parandak",
+      "provinceId": "IR-00",
+      "countyId": "41",
+      "countyNameFa": "زرندیه",
+      "districtId": "534",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.3685266,
+      "longitude": 50.677228,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q20645825",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1108",
+      "officialId": 4513,
+      "code": "1108",
+      "nameFa": "زاویه",
+      "nameEn": "Zavieh",
+      "provinceId": "IR-00",
+      "countyId": "41",
+      "countyNameFa": "زرندیه",
+      "districtId": "535",
+      "districtNameFa": "زوایه",
+      "latitude": 35.3772559,
+      "longitude": 50.550885,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q377431",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1102",
+      "officialId": 4514,
+      "code": "1102",
+      "nameFa": "کمیجان",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "42",
+      "countyNameFa": "کمیجان",
+      "districtId": "536",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.72142,
+      "longitude": 49.32653,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "126715",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2379",
+      "officialId": 4515,
+      "code": "2379",
+      "nameFa": "میلاجرد",
+      "nameEn": "Milajerd",
+      "provinceId": "IR-00",
+      "countyId": "42",
+      "countyNameFa": "کمیجان",
+      "districtId": "537",
+      "districtNameFa": "میلاجرد",
+      "latitude": 34.6216597,
+      "longitude": 49.200468,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2620898",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2073",
+      "officialId": 4516,
+      "code": "2073",
+      "nameFa": "جاورسیان",
+      "nameEn": "Javarseyan",
+      "provinceId": "IR-00",
+      "countyId": "43",
+      "countyNameFa": "خنداب",
+      "districtId": "538",
+      "districtNameFa": "قره چای",
+      "latitude": 34.2555487,
+      "longitude": 49.3182278,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150958",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2304",
+      "officialId": 4517,
+      "code": "2304",
+      "nameFa": "خنداب",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "43",
+      "countyNameFa": "خنداب",
+      "districtId": "539",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.3928,
+      "longitude": 49.1841,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "127389",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2136",
+      "officialId": 4518,
+      "code": "2136",
+      "nameFa": "فرمهین",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "44",
+      "countyNameFa": "فراهان",
+      "districtId": "540",
+      "districtNameFa": "مرکزی",
+      "latitude": 34.50383,
+      "longitude": 49.68437,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "134788",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2773",
+      "officialId": 4519,
+      "code": "2773",
+      "nameFa": "خنجین",
+      "nameEn": "Khenejin",
+      "provinceId": "IR-00",
+      "countyId": "44",
+      "countyNameFa": "فراهان",
+      "districtId": "541",
+      "districtNameFa": "خنجین",
+      "latitude": 34.7585192,
+      "longitude": 49.5223761,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q6401285",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2941",
+      "officialId": 4520,
+      "code": "2941",
+      "nameFa": "تلخاب",
+      "nameEn": null,
+      "provinceId": "IR-00",
+      "countyId": "44",
+      "countyNameFa": "فراهان",
+      "districtId": "541",
+      "districtNameFa": "خنجین",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    }
+  ]
+}
