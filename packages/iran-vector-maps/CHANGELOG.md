@@ -29,6 +29,10 @@ This changelog follows the package version in `package.json`. Unreleased changes
 
 - First public release of the native SVG React map renderer.
 - Added controlled selection, keyboard access, color scales, and SVG export.
+# 0.4.1 — 2026-10-02
+
+- Corrected browser verification to target the interactive city-point control itself.
+
 # 0.4.0 — 2026-10-02
 
 - Published companion-data province helpers for on-demand county and city-point assets.

@@ -46,7 +46,7 @@ test('data workspace imports JSON and exports valid SVG', async ({ page }) => {
 
 test('province maps show sourced city markers and county context', async ({ page }) => {
   await page.goto('map/province/IR-05')
-  const city = page.locator('.city-marker').first()
+  const city = page.locator('.city-marker circle').first()
   await expect(city).toBeVisible()
   await city.hover()
   await expect(page.locator('.map-tooltip')).toContainText('شهرستان')
