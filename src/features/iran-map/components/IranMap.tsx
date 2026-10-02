@@ -1,7 +1,7 @@
 import { BookOpen, ChevronLeft, Code2, LocateFixed, Moon, RotateCcw, Sun } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { getGeometry, getRegions } from '../data/loaders'
+import { getGeometry, getManifest, getRegions, type IranMapManifest } from '../data/loaders'
 import { regionUrl } from '../lib/map-url'
 import type { AdministrativeRegion, MapCollection, MapFeatureProperties } from '../model/map.types'
 import { GeoMap } from './GeoMap'
@@ -22,6 +22,7 @@ export function IranMap() {
   const { provinceId, countyId } = useParams()
   const activeId = countyId ?? provinceId ?? 'IR'
   const [regions, setRegions] = useState<AdministrativeRegion[]>([])
+  const [manifest, setManifest] = useState<IranMapManifest>()
   const [geometry, setGeometry] = useState<MapCollection>()
   const [selectedId, setSelectedId] = useState<string>()
   const [hovered, setHovered] = useState<MapFeatureProperties | null>(null)
@@ -29,6 +30,7 @@ export function IranMap() {
   const [dark, setDark] = useState(false)
 
   useEffect(() => { getRegions().then(setRegions).catch(() => setError('فهرست مناطق در دسترس نیست.')) }, [])
+  useEffect(() => { getManifest().then(setManifest).catch(() => undefined) }, [])
   useEffect(() => {
     let cancelled = false
     getGeometry(countyId ? `${provinceId}` : activeId).then((value) => { if (!cancelled) { setGeometry(value); setError(undefined) } }).catch(() => { if (!cancelled) setError('اطلاعات مرزی این منطقه در حال حاضر موجود نیست.') })
@@ -40,7 +42,7 @@ export function IranMap() {
   useEffect(() => { document.title = active ? `نقشه ${levels[active.level]} ${active.nameFa}` : 'نقشه تقسیمات کشوری ایران' }, [active])
   const mapTitle = active?.level === 'province' ? `شهرستان‌های استان ${active.nameFa}` : 'استان‌های ایران'
   const mapHint = active?.level === 'province' ? 'برای دیدن اطلاعات، یک شهرستان را انتخاب کنید.' : 'برای ورود به هر استان روی آن کلیک کنید.'
-  const mapFeatureCount = `${geometry?.features.length ?? 0} مرز واقعی`
+  const mapFeatureCount = `${geometry?.features.length ?? 0} مرز واقعی${manifest ? ` · داده ${manifest.datasetVersion}` : ''}`
 
   return <main className={dark ? 'app dark' : 'app'}>
     <header><div className="brand"><span>نقشهٔ ایران</span><small>سامانهٔ تقسیمات کشوری</small></div><MapSearch regions={regions} onSelect={(region) => { setSelectedId(region.id); navigate(regionUrl(region, regions)) }} /><div className="header-actions"><Link className="icon-button" to="/package" aria-label="بستهٔ React"><Code2 size={19} /></Link><Link className="icon-button" to="/about" aria-label="راهنمای استفاده"><BookOpen size={19} /></Link><button className="icon-button" onClick={() => setDark(!dark)} aria-label="تغییر حالت رنگ">{dark ? <Sun size={19} /> : <Moon size={19} />}</button></div></header>

@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.3.0",
+    "date": "2026-10-02",
+    "titleFa": "اعتماد و نقشه‌های داده‌ای",
+    "titleEn": "Trust and data maps",
+    "itemsFa": ["طبقه‌بندی آستانه‌ای و بازه‌ای رنگ‌ها", "کنترل برچسب مناطق کوچک", "مثال‌ها، پوشش داده و راهنمای انتشار"],
+    "itemsEn": ["Threshold and equal-interval colors", "Small-region label control", "Examples, coverage checks, and release guidance"]
+  },
+  {
     "version": "0.2.0",
     "date": "2026-10-01",
     "titleFa": "داده و تعامل",

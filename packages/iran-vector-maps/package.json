@@ -1,6 +1,6 @@
 {
   "name": "iran-vector-maps",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Accessible, data-driven SVG administrative maps for React, with first-class Iran support.",
   "publishConfig": {
     "access": "public"

@@ -23,6 +23,7 @@ export interface MapFeatureCollection<P extends MapRegionProperties = MapRegionP
 }
 
 export type MapValueMap = ReadonlyMap<string, number> | Record<string, number>
+export type MapClassification = 'continuous' | 'equal-interval' | 'threshold'
 
 export interface MapRegionInteraction<P extends MapRegionProperties = MapRegionProperties> {
   region: P
@@ -32,6 +33,11 @@ export interface MapRegionInteraction<P extends MapRegionProperties = MapRegionP
 
 export interface MapColorScale {
   noData?: string
+  colors?: readonly string[]
+  classification?: MapClassification
+  breaks?: readonly number[]
+  minimum?: number
+  maximum?: number
   lowHue?: number
   highHue?: number
   saturation?: number
@@ -48,6 +54,7 @@ export interface IranAdminSvgMapProps<P extends MapRegionProperties = MapRegionP
   height?: number
   padding?: number
   showValues?: boolean
+  labelMinArea?: number
   emptyState?: ReactNode
   colorScale?: MapColorScale
   valueFormatter?: (value: number, region: P) => string

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import { parseMapValuesCsv } from '../dist/csv.js'
 import { validateMapFeatureCollection } from '../dist/validation.js'
+import { createMapColorScale } from '../dist/scale.js'
 
 const validCollection = { type: 'FeatureCollection', features: [{ type: 'Feature', properties: { id: 'IR-05', nameFa: 'کرمانشاه' }, geometry: { type: 'Polygon', coordinates: [[[46, 34], [47, 34], [47, 35], [46, 34]]] } }] }
 
@@ -22,4 +23,12 @@ test('parses Persian digits and reports invalid metric rows', () => {
   assert.equal(result.values.get('IR-05'), 12840)
   assert.equal(result.issues.length, 1)
   assert.match(result.issues[0].message, /Invalid numeric value/)
+})
+
+test('classifies dashboard values with stable threshold colors', () => {
+  const fill = createMapColorScale([10, 40, 90], { classification: 'threshold', breaks: [25, 75], colors: ['#dbeafe', '#60a5fa', '#1d4ed8'] })
+  assert.equal(fill(undefined), '#dce9dd')
+  assert.equal(fill(10), '#dbeafe')
+  assert.equal(fill(40), '#60a5fa')
+  assert.equal(fill(90), '#1d4ed8')
 })

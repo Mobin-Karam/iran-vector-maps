@@ -1,5 +1,7 @@
 # Iran Vector Maps
 
+[![npm](https://img.shields.io/npm/v/iran-vector-maps?label=iran-vector-maps)](https://www.npmjs.com/package/iran-vector-maps) [![GitHub release](https://img.shields.io/github/v/release/Mobin-Karam/iran-vector-maps)](https://github.com/Mobin-Karam/iran-vector-maps/releases) [![License](https://img.shields.io/badge/license-MIT-0b6b3a)](LICENSE)
+
 ![Iran Vector Maps cover](docs/assets/iran-vector-maps-cover.png)
 
 Fast, accessible, data-driven SVG maps for React, with a complete Iran province and county explorer. The project includes a reusable package, a bilingual demo website, and a reproducible pipeline for verified geographic assets.
@@ -12,6 +14,7 @@ After GitHub Pages is enabled, visit **https://mobin-karam.github.io/iran-vector
 
 ```bash
 npm install iran-vector-maps
+npm install iran-vector-maps-data # optional verified Iran asset helpers
 ```
 
 ```tsx
@@ -69,6 +72,9 @@ Sources, attribution, scope, and known limits are documented in [DATA_SOURCES.md
 - [AI and application integration](docs/AI_AGENT_INTEGRATION.md)
 - [Map-data update workflow](docs/UPDATING_MAP_DATA.md)
 - [Implemented and planned package features](docs/PACKAGE_FEATURES.md)
+- [Reliability, coverage, and correction policy](docs/RELIABILITY.md)
+- [Release and versioning policy](docs/RELEASE_POLICY.md)
+- [Runnable Vite, Next.js, and Remix examples](examples/README.md)
 
 ## License
 

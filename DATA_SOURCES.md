@@ -2,6 +2,8 @@
 
 This file records the provenance of geographic and administrative inputs. The MIT license in the repository applies to this project’s source code, not to upstream geographic data. When redistributing generated assets, retain the applicable upstream attribution and license obligations below.
 
+The companion `iran-vector-maps-data` package exposes versioned URLs for these generated assets; it does not alter the upstream license obligations.
+
 ## OSM province boundaries
 
 - **Name:** Iran GeoJSON province boundaries

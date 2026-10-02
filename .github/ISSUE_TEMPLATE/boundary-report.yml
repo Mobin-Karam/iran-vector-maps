@@ -1,0 +1,21 @@
+name: Boundary or data report
+description: Report an incorrect, missing, or mismatched Iran administrative boundary.
+title: "[Boundary]: "
+labels: ["boundary-data"]
+body:
+  - type: input
+    id: region-id
+    attributes: { label: Stable region ID, description: "For example IR-05 or a county ID." }
+    validations: { required: true }
+  - type: input
+    id: expected-name
+    attributes: { label: Expected Persian name }
+    validations: { required: true }
+  - type: textarea
+    id: issue
+    attributes: { label: What is incorrect or missing? }
+    validations: { required: true }
+  - type: textarea
+    id: source
+    attributes: { label: Verifiable source, URL, or official reference }
+    validations: { required: true }

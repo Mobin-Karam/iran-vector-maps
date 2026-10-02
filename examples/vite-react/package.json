@@ -1,0 +1,8 @@
+{
+  "name": "iran-vector-maps-vite-example",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "vite build" },
+  "dependencies": { "@vitejs/plugin-react": "^6.1.1", "iran-vector-maps": "^0.3.0", "react": "^19.2.8", "react-dom": "^19.2.8", "vite": "^8.3.1" },
+  "devDependencies": {}
+}

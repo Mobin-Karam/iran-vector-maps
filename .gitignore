@@ -7,3 +7,5 @@ graphify-out/
 data-source/
 packages/*/node_modules/
 packages/*/dist/
+test-results/
+playwright-report/

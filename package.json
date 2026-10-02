@@ -16,8 +16,11 @@
     "maps:index": "node scripts/build-search-index.mjs",
     "maps:build": "node scripts/build-map-data.mjs",
     "test": "node --test tests/**/*.test.mjs",
+    "test:e2e": "playwright test",
     "package:build": "npm --prefix packages/iran-vector-maps run build",
+    "data:build": "npm --prefix packages/iran-vector-maps-data run build",
     "package:pack": "npm pack ./packages/iran-vector-maps",
+    "data:pack": "npm pack ./packages/iran-vector-maps-data",
     "package:sync": "node scripts/sync-package-info.mjs"
   },
   "dependencies": {
@@ -31,12 +34,14 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
     "@types/d3-geo": "^3.1.1",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
     "@types/topojson-client": "^3.1.5",
     "@types/topojson-specification": "^1.0.5",
+    "@playwright/test": "^1.55.0",
     "@vitejs/plugin-react": "^6.1.1",
     "eslint": "^10.10.0",
     "eslint-plugin-react-hooks": "^7.1.1",

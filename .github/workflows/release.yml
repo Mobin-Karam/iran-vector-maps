@@ -18,18 +18,22 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm --prefix packages/iran-vector-maps test
+      - run: npm --prefix packages/iran-vector-maps-data run build
+      - run: npm test
       - name: Pack installable package
-        run: npm pack ./packages/iran-vector-maps
+        run: |
+          npm pack ./packages/iran-vector-maps
+          npm pack ./packages/iran-vector-maps-data
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           if gh release view "${GITHUB_REF_NAME}" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
-            gh release upload "${GITHUB_REF_NAME}" iran-vector-maps-*.tgz --clobber --repo "${GITHUB_REPOSITORY}"
+          gh release upload "${GITHUB_REF_NAME}" iran-vector-maps-*.tgz iran-vector-maps-data-*.tgz --clobber --repo "${GITHUB_REPOSITORY}"
           else
             gh release create "${GITHUB_REF_NAME}" \
               --repo "${GITHUB_REPOSITORY}" \
               --title "${GITHUB_REF_NAME}" \
               --generate-notes \
-              iran-vector-maps-*.tgz
+              iran-vector-maps-*.tgz iran-vector-maps-data-*.tgz
           fi

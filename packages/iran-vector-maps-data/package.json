@@ -1,0 +1,10 @@
+{
+  "name": "iran-vector-maps-data",
+  "version": "0.3.0",
+  "description": "Versioned Iran administrative map data manifest and static-asset helpers for iran-vector-maps.",
+  "license": "MIT",
+  "type": "module",
+  "files": ["dist", "README.md", "LICENSE", "data"],
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "scripts": { "build": "tsc -p tsconfig.json", "prepack": "npm run build" }
+}

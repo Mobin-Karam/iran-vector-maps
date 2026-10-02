@@ -8,18 +8,11 @@ See the interactive Persian/English demo and integration guides at https://mobin
 
 ## Install
 
-Until the package is published to npm, install from the local folder or create a tarball:
-
-```bash
-npm install ./packages/iran-vector-maps
-# or, after `npm pack` in this package folder
-npm install ./iran-vector-maps-0.2.0.tgz
-```
-
-When publishing, the public package name is `iran-vector-maps`:
+Install the renderer and, when you need the maintained Iran layer URLs, the optional data companion:
 
 ```bash
 npm install iran-vector-maps
+npm install iran-vector-maps-data # optional Iran geographic assets
 ```
 
 ## Basic use
@@ -55,6 +48,8 @@ Each feature must have `properties.id` and `properties.nameFa`. `nameEn`, `level
 - Native, responsive SVG generated from your polygons or multipolygons.
 - Keyboard selection with Enter and Space, visible focus state, and aria labels.
 - Controlled selection, hover callback, per-region values, Persian number formatting, and default choropleth colors.
+- Continuous, threshold, and equal-interval scales with custom palettes and explicit break values.
+- `labelMinArea` to hide values where the available polygon space is too small.
 - `IranMapLegend` for metric explanation, and configurable no-data / color-scale hues.
 - CSV metric parsing with Persian/Arabic digit support and unknown-region detection.
 - Optional pointer-positioned `IranMapTooltip` for host-controlled hover UI.
@@ -77,6 +72,10 @@ npm pack
 `npm pack` creates the same tarball users install. Review its file list before publishing.
 
 To release publicly, run `npm publish --access public` from this directory. Publishing is intentionally not performed by this repository.
+
+## Examples and framework support
+
+Copy-paste examples for Vite, Next.js App Router, Remix, JSON/CSV data imports, RTL, and dashboard maps live in the repository’s [`examples/`](../../examples) directory. The component is SSR-safe to import: it accesses browser APIs only when rendering or exporting SVG in the browser.
 
 ## License and data
 
