@@ -28,12 +28,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh release view "${GITHUB_REF_NAME}" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
-          gh release upload "${GITHUB_REF_NAME}" iran-vector-maps-*.tgz iran-vector-maps-data-*.tgz --clobber --repo "${GITHUB_REPOSITORY}"
-          else
+          if ! gh release view "${GITHUB_REF_NAME}" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
             gh release create "${GITHUB_REF_NAME}" \
               --repo "${GITHUB_REPOSITORY}" \
               --title "${GITHUB_REF_NAME}" \
-              --generate-notes \
-              iran-vector-maps-*.tgz iran-vector-maps-data-*.tgz
+              --generate-notes
           fi
+          gh release upload "${GITHUB_REF_NAME}" iran-vector-maps-*.tgz --clobber --repo "${GITHUB_REPOSITORY}"
+          gh release upload "${GITHUB_REF_NAME}" iran-vector-maps-data-*.tgz --clobber --repo "${GITHUB_REPOSITORY}"
