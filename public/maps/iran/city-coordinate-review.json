@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "datasetVersion": "2026-10-02",
+  "purpose": "Community review queue for official 1404 city records whose coordinates were not confidently resolved from open sources.",
+  "count": 1,
+  "cities": [
+    {
+      "id": "10700020002012",
+      "nameFa": "مبارک آباد دیز",
+      "nameEn": null,
+      "provinceMapId": "IR-07",
+      "provinceFa": "فارس",
+      "countyId": 10700020,
+      "countyFa": "قیرو کارزین",
+      "districtId": 10700020002,
+      "districtFa": "مرکزی"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ npm install iran-vector-maps iran-vector-maps-data
 import { fetchIranMapAsset, iranMapDataset } from 'iran-vector-maps-data'
 
 const provincesTopology = await fetchIranMapAsset('provinces.topo.json')
+const cities = await fetchIranMapAsset('cities.json')
 console.log(iranMapDataset.provinces) // 31
 ```
 
@@ -19,4 +20,4 @@ The assets are served from the project’s GitHub Pages deployment. Pin a packag
 
 - Provinces: 31/31, polygon geometry.
 - Counties: 466 in the current verified dataset, loaded one province at a time.
-- Districts, cities, rural districts, and settlements: metadata only; no geometry is claimed.
+- Cities: 1,481 official 1404 hierarchy records; 1,480 currently have WGS84 points and 1,458 are enabled as SVG labels.\n- City polygons are not claimed. The point layer is separate from administrative boundary geometry.\n- Districts, rural districts, and settlements: metadata only; no geometry is claimed.

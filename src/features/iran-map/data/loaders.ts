@@ -1,4 +1,4 @@
-import type { AdministrativeRegion, MapCollection } from '../model/map.types'
+import type { AdministrativeRegion, IranCitiesDataset, MapCollection } from '../model/map.types'
 import { topologyToCollection } from '../lib/geo'
 import { validateMapFeatureCollection } from 'iran-vector-maps'
 
@@ -8,7 +8,8 @@ const json = <T,>(path: string) => {
   return cache.get(path) as Promise<T>
 }
 export const getRegions = () => json<AdministrativeRegion[]>('maps/iran/regions.json')
-export type IranMapManifest = { datasetVersion: string; generatedAt: string; availableGeometry: { provinces: boolean; counties: string[] }; unavailable: string[] }
+export const getCities = () => json<IranCitiesDataset>('maps/iran/cities.json')
+export type IranMapManifest = { datasetVersion: string; generatedAt: string; availableGeometry: { provinces: boolean; counties: string[] }; availablePoints?: { cities?: string }; pointCounts?: { cityRecords: number; geolocated: number; labelEnabled: number; unresolved: number }; unavailable: string[] }
 export const getManifest = () => json<IranMapManifest>('maps/iran/manifest.json')
 export const getGeometry = async (id: string): Promise<MapCollection> => {
   const path = id === 'IR' ? 'maps/iran/provinces.topo.json' : `maps/iran/regions/${id}/counties.topo.json`
