@@ -1,6 +1,5 @@
 import { LocateFixed, Moon, RotateCcw, Sun } from 'lucide-react'
 import type { AdministrativeRegion } from '../model/map.types'
-import { MapSearch } from './MapSearch'
 import './map-workspace-header.css'
 
 interface Props {
@@ -14,10 +13,12 @@ interface Props {
   onThemeToggle: () => void
 }
 
-export function MapWorkspaceHeader({ regions, title, hint, dark, onSearchSelect, onReset, onLocate, onThemeToggle }: Props) {
+export function MapWorkspaceHeader({ dark, onReset, onLocate, onThemeToggle }: Props) {
   return <section className="map-workspace-header" aria-label="ابزارهای نقشه">
-    <div className="map-workspace-title"><strong>{title}</strong><small>{hint}</small></div>
-    <MapSearch regions={regions} onSelect={onSearchSelect} />
+    <div className="map-workspace-brand">
+      <button className="lang-switch" type="button" aria-label="تغییر زبان">EN</button>
+      <div className="workspace-brand"><span className="workspace-brand-mark" aria-hidden="true">✦</span><span>نقشه ساز</span></div>
+    </div>
     <div className="map-workspace-actions">
       <button className="control" onClick={onReset}><RotateCcw size={17} /> نمای ایران</button>
       <button className="control icon-only" onClick={onLocate} aria-label="انتخاب منطقهٔ جاری" title="انتخاب منطقهٔ جاری"><LocateFixed size={17} /></button>
