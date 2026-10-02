@@ -12,6 +12,7 @@ The npm package is `iran-vector-maps`. It is designed for React applications and
 - SVG serialization/download utility for reports and product exports.
 - CSV metrics adapter with quoted-cell parsing, localized digit support, duplicate-row reporting, and unknown-region checks.
 - Explicitly no tracking, GPS, remote tiles, iframe, canvas, or router dependency.
+- Immutable record adapters for React Query, SWR, loaders, and other host-owned data caches without taking a query-library dependency.
 
 ## Deliberately host-owned
 

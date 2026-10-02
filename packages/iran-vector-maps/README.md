@@ -43,6 +43,15 @@ export function BirthMap() {
 
 Each feature must have `properties.id` and `properties.nameFa`. `nameEn`, `level`, `parentId`, and any additional metadata are preserved and returned by callbacks.
 
+## Query-library adapter
+
+`mapValuesFromRecords` accepts immutable output from React Query, SWR, Remix loaders, or your own cache—without making this package depend on any of them.
+
+```ts
+const values = mapValuesFromRecords(query.data ?? [])
+// query.data: readonly { regionId: string; value: number }[]
+```
+
 ## Features
 
 - Native, responsive SVG generated from your polygons or multipolygons.

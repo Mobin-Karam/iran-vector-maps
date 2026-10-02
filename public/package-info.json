@@ -1,8 +1,20 @@
 {
   "name": "iran-vector-maps",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Accessible, data-driven SVG administrative maps for React, with first-class Iran support.",
   "releases": [
+    {
+      "version": "0.3.2",
+      "date": "2026-10-02",
+      "titleFa": "اتصال دادهٔ پایدار",
+      "titleEn": "Stable data integration",
+      "itemsFa": [
+        "adapter تغییرناپذیر برای دادهٔ React Query، SWR و loader"
+      ],
+      "itemsEn": [
+        "Immutable adapter for React Query, SWR, and loader data"
+      ]
+    },
     {
       "version": "0.3.1",
       "date": "2026-10-02",

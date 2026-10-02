@@ -2,6 +2,10 @@
 
 This changelog follows the package version in `package.json`. Unreleased changes belong under a future version heading and are not advertised as published until `npm publish` succeeds.
 
+## 0.3.2 — 2026-10-02
+
+- Added immutable value adapters for React Query, SWR, and loader results.
+
 ## 0.3.1 — 2026-10-02
 
 - Added quantile classification and map marker/annotation points.

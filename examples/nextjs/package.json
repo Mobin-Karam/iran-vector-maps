@@ -2,5 +2,5 @@
   "name": "iran-vector-maps-nextjs-example",
   "private": true,
   "scripts": { "dev": "next dev", "build": "next build", "start": "next start" },
-  "dependencies": { "iran-vector-maps": "^0.3.1", "next": "^16.1.0", "react": "^19.2.8", "react-dom": "^19.2.8" }
+  "dependencies": { "iran-vector-maps": "^0.3.2", "next": "^16.1.0", "react": "^19.2.8", "react-dom": "^19.2.8" }
 }

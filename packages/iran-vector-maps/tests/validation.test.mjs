@@ -3,6 +3,7 @@ import test from 'node:test'
 import { parseMapValuesCsv } from '../dist/csv.js'
 import { validateMapFeatureCollection } from '../dist/validation.js'
 import { createMapColorScale } from '../dist/scale.js'
+import { mapValueEntries, mapValuesFromRecords } from '../dist/adapters.js'
 
 const validCollection = { type: 'FeatureCollection', features: [{ type: 'Feature', properties: { id: 'IR-05', nameFa: 'کرمانشاه' }, geometry: { type: 'Polygon', coordinates: [[[46, 34], [47, 34], [47, 35], [46, 34]]] } }] }
 
@@ -37,4 +38,12 @@ test('derives deterministic quantile breaks from supplied values', () => {
   const fill = createMapColorScale([1, 2, 3, 100], { classification: 'quantile', colors: ['#f8fafc', '#94a3b8'] })
   assert.equal(fill(1), '#f8fafc')
   assert.equal(fill(100), '#94a3b8')
+})
+
+test('adapts immutable query records without mutating their source', () => {
+  const records = Object.freeze([{ regionId: 'IR-05', value: 9 }, { regionId: 'IR-07', value: 12 }])
+  const values = mapValuesFromRecords(records)
+  assert.equal(Object.isFrozen(values), true)
+  assert.deepEqual(values, { 'IR-05': 9, 'IR-07': 12 })
+  assert.deepEqual(mapValueEntries(values), [{ regionId: 'IR-05', value: 9 }, { regionId: 'IR-07', value: 12 }])
 })
