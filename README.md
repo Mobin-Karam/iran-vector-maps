@@ -74,6 +74,8 @@ Sources, attribution, scope, and known limits are documented in [DATA_SOURCES.md
 - [Implemented and planned package features](docs/PACKAGE_FEATURES.md)
 - [Reliability, coverage, and correction policy](docs/RELIABILITY.md)
 - [Release and versioning policy](docs/RELEASE_POLICY.md)
+- [Migration guide](docs/MIGRATION.md)
+- [Contributor guide](CONTRIBUTING.md)
 - [Runnable Vite, Next.js, and Remix examples](examples/README.md)
 - [Use cases and metric-data contracts](docs/USE_CASES.md)
 
