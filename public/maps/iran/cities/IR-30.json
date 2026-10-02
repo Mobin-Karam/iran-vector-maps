@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "1404-2026-10-02",
+  "province": {
+    "id": "IR-30",
+    "code": "30",
+    "nameFa": "البرز"
+  },
+  "cityCount": 18,
+  "geolocatedCount": 16,
+  "cities": [
+    {
+      "id": "IR-CITY-1590",
+      "officialId": 5950,
+      "code": "1590",
+      "nameFa": "کرج",
+      "nameEn": null,
+      "provinceId": "IR-30",
+      "countyId": "510",
+      "countyNameFa": "کرج",
+      "districtId": "1696",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.83266,
+      "longitude": 50.99155,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "128747",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2118",
+      "officialId": 5951,
+      "code": "2118",
+      "nameFa": "ماهدشت",
+      "nameEn": "Mahdasht",
+      "provinceId": "IR-30",
+      "countyId": "510",
+      "countyNameFa": "کرج",
+      "districtId": "1696",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.720408,
+      "longitude": 50.7663625,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2430889",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2272",
+      "officialId": 5952,
+      "code": "2272",
+      "nameFa": "کمال شهر",
+      "nameEn": "Kamalshahr",
+      "provinceId": "IR-30",
+      "countyId": "510",
+      "countyNameFa": "کرج",
+      "districtId": "1696",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.8823936,
+      "longitude": 50.8434385,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2430914",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2273",
+      "officialId": 5953,
+      "code": "2273",
+      "nameFa": "محمدشهر",
+      "nameEn": "Mohammad Shahr",
+      "provinceId": "IR-30",
+      "countyId": "510",
+      "countyNameFa": "کرج",
+      "districtId": "1696",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.7446897,
+      "longitude": 50.8722777,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150297",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2635",
+      "officialId": 5954,
+      "code": "2635",
+      "nameFa": "گرمدره",
+      "nameEn": "Garmdareh",
+      "provinceId": "IR-30",
+      "countyId": "510",
+      "countyNameFa": "کرج",
+      "districtId": "1696",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.7537176,
+      "longitude": 51.0470722,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150295",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2070",
+      "officialId": 5955,
+      "code": "2070",
+      "nameFa": "آسارا",
+      "nameEn": "Asara",
+      "provinceId": "IR-30",
+      "countyId": "510",
+      "countyNameFa": "کرج",
+      "districtId": "1697",
+      "districtNameFa": "آسارا",
+      "latitude": 36.0391312,
+      "longitude": 51.1908709,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2625230",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1587",
+      "officialId": 5956,
+      "code": "1587",
+      "nameFa": "هشتگرد",
+      "nameEn": null,
+      "provinceId": "IR-30",
+      "countyId": "511",
+      "countyNameFa": "ساوجبلاغ",
+      "districtId": "1698",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.962,
+      "longitude": 50.6799,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "131691",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2026",
+      "officialId": 5957,
+      "code": "2026",
+      "nameFa": "گلسار",
+      "nameEn": "Golsar",
+      "provinceId": "IR-30",
+      "countyId": "511",
+      "countyNameFa": "ساوجبلاغ",
+      "districtId": "1698",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.907778,
+      "longitude": 50.7825,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q20671697",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2664",
+      "officialId": 5958,
+      "code": "2664",
+      "nameFa": "مهستان",
+      "nameEn": null,
+      "provinceId": "IR-30",
+      "countyId": "511",
+      "countyNameFa": "ساوجبلاغ",
+      "districtId": "1698",
+      "districtNameFa": "مرکزی",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2630",
+      "officialId": 5959,
+      "code": "2630",
+      "nameFa": "کوهسار",
+      "nameEn": "Koohsar",
+      "provinceId": "IR-30",
+      "countyId": "511",
+      "countyNameFa": "ساوجبلاغ",
+      "districtId": "1699",
+      "districtNameFa": "چندار",
+      "latitude": 35.9624264,
+      "longitude": 50.7757828,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2437207",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1586",
+      "officialId": 5960,
+      "code": "1586",
+      "nameFa": "نظرآباد",
+      "nameEn": null,
+      "provinceId": "IR-30",
+      "countyId": "512",
+      "countyNameFa": "نظرآباد",
+      "districtId": "1700",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.95411,
+      "longitude": 50.60607,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "122438",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2025",
+      "officialId": 5961,
+      "code": "2025",
+      "nameFa": "تنکمان",
+      "nameEn": null,
+      "provinceId": "IR-30",
+      "countyId": "512",
+      "countyNameFa": "نظرآباد",
+      "districtId": "1701",
+      "districtNameFa": "تنکمان",
+      "latitude": 35.8907,
+      "longitude": 50.6156,
+      "coordinateStatus": "corroborated",
+      "coordinateSources": [
+        "iran-city-coordinates",
+        "iran-places-api"
+      ],
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2169",
+      "officialId": 5962,
+      "code": "2169",
+      "nameFa": "طالقان",
+      "nameEn": null,
+      "provinceId": "IR-30",
+      "countyId": "513",
+      "countyNameFa": "طالقان",
+      "districtId": "1702",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.17449,
+      "longitude": 50.76908,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "9904",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1584",
+      "officialId": 5963,
+      "code": "1584",
+      "nameFa": "اشتهارد",
+      "nameEn": null,
+      "provinceId": "IR-30",
+      "countyId": "514",
+      "countyNameFa": "اشتهارد",
+      "districtId": "1704",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.7255,
+      "longitude": 50.3662,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "135205",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2981",
+      "officialId": 5964,
+      "code": "2981",
+      "nameFa": "پلنگ آباد",
+      "nameEn": null,
+      "provinceId": "IR-30",
+      "countyId": "514",
+      "countyNameFa": "اشتهارد",
+      "districtId": "1705",
+      "districtNameFa": "پلنگ آباد",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2282",
+      "officialId": 5965,
+      "code": "2282",
+      "nameFa": "فردیس",
+      "nameEn": null,
+      "provinceId": "IR-30",
+      "countyId": "515",
+      "countyNameFa": "فردیس",
+      "districtId": "1706",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.7292,
+      "longitude": 50.98483,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "112179",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2271",
+      "officialId": 5966,
+      "code": "2271",
+      "nameFa": "مشکین‌دشت",
+      "nameEn": null,
+      "provinceId": "IR-30",
+      "countyId": "515",
+      "countyNameFa": "فردیس",
+      "districtId": "1707",
+      "districtNameFa": "مشکین‌دشت",
+      "latitude": 35.751,
+      "longitude": 50.9421,
+      "coordinateStatus": "corroborated",
+      "coordinateSources": [
+        "iran-city-coordinates",
+        "iran-places-api"
+      ],
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2631",
+      "officialId": 5967,
+      "code": "2631",
+      "nameFa": "چهارباغ",
+      "nameEn": null,
+      "provinceId": "IR-30",
+      "countyId": "516",
+      "countyNameFa": "چهارباغ",
+      "districtId": "1708",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.8389,
+      "longitude": 50.8481,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "41672",
+      "renderLabelDefault": true
+    }
+  ]
+}
