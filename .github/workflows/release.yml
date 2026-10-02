@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write
 
 jobs:
   release:
@@ -36,3 +37,7 @@ jobs:
           fi
           gh release upload "${GITHUB_REF_NAME}" iran-vector-maps-*.tgz --clobber --repo "${GITHUB_REPOSITORY}"
           gh release upload "${GITHUB_REF_NAME}" iran-vector-maps-data-*.tgz --clobber --repo "${GITHUB_REPOSITORY}"
+      - name: Publish packages with npm trusted publishing
+        run: |
+          npm --prefix packages/iran-vector-maps publish --access public
+          npm --prefix packages/iran-vector-maps-data publish --access public
