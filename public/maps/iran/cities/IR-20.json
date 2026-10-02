@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "1404-2026-10-02",
+  "province": {
+    "id": "IR-20",
+    "code": "20",
+    "nameFa": "سمنان"
+  },
+  "cityCount": 21,
+  "geolocatedCount": 19,
+  "cities": [
+    {
+      "id": "IR-CITY-2263",
+      "officialId": 5630,
+      "code": "2263",
+      "nameFa": "امیریه",
+      "nameEn": "Amiriyeh",
+      "provinceId": "IR-20",
+      "countyId": "404",
+      "countyNameFa": "دامغان",
+      "districtId": "1443",
+      "districtNameFa": "امیراباد",
+      "latitude": 36.0287295,
+      "longitude": 54.1354182,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2428473",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1540",
+      "officialId": 5631,
+      "code": "1540",
+      "nameFa": "دامغان",
+      "nameEn": null,
+      "provinceId": "IR-20",
+      "countyId": "404",
+      "countyNameFa": "دامغان",
+      "districtId": "1444",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.1679,
+      "longitude": 54.34292,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "138025",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2264",
+      "officialId": 5632,
+      "code": "2264",
+      "nameFa": "دیباج",
+      "nameEn": "Dibaj",
+      "provinceId": "IR-20",
+      "countyId": "404",
+      "countyNameFa": "دامغان",
+      "districtId": "1444",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.4294828,
+      "longitude": 54.2192996,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2626271",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2759",
+      "officialId": 5633,
+      "code": "2759",
+      "nameFa": "کلاته",
+      "nameEn": "Kalāteh",
+      "provinceId": "IR-20",
+      "countyId": "404",
+      "countyNameFa": "دامغان",
+      "districtId": "1444",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.3555379,
+      "longitude": 54.1363334,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150587",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1542",
+      "officialId": 5634,
+      "code": "1542",
+      "nameFa": "سمنان",
+      "nameEn": null,
+      "provinceId": "IR-20",
+      "countyId": "405",
+      "countyNameFa": "سمنان",
+      "districtId": "1445",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.57691,
+      "longitude": 53.39205,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "116402",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1545",
+      "officialId": 5635,
+      "code": "1545",
+      "nameFa": "بسطام",
+      "nameEn": "Bastam",
+      "provinceId": "IR-20",
+      "countyId": "406",
+      "countyNameFa": "شاهرود",
+      "districtId": "1446",
+      "districtNameFa": "بسطام",
+      "latitude": 36.4843908,
+      "longitude": 54.9907135,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q720677",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1546",
+      "officialId": 5636,
+      "code": "1546",
+      "nameFa": "مجن",
+      "nameEn": null,
+      "provinceId": "IR-20",
+      "countyId": "406",
+      "countyNameFa": "شاهرود",
+      "districtId": "1446",
+      "districtNameFa": "بسطام",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2160",
+      "officialId": 5637,
+      "code": "2160",
+      "nameFa": "کلاته خیج",
+      "nameEn": "kalāte Khij",
+      "provinceId": "IR-20",
+      "countyId": "406",
+      "countyNameFa": "شاهرود",
+      "districtId": "1446",
+      "districtNameFa": "بسطام",
+      "latitude": 36.672428,
+      "longitude": 55.2909064,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150593",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2161",
+      "officialId": 5638,
+      "code": "2161",
+      "nameFa": "بیارجمند",
+      "nameEn": "Biyārjomand",
+      "provinceId": "IR-20",
+      "countyId": "406",
+      "countyNameFa": "شاهرود",
+      "districtId": "1447",
+      "districtNameFa": "بیارجمند",
+      "latitude": 36.0817586,
+      "longitude": 55.7999897,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150590",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1547",
+      "officialId": 5639,
+      "code": "1547",
+      "nameFa": "شاهرود",
+      "nameEn": null,
+      "provinceId": "IR-20",
+      "countyId": "406",
+      "countyNameFa": "شاهرود",
+      "districtId": "1448",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.41819,
+      "longitude": 54.97628,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "135423",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2775",
+      "officialId": 5640,
+      "code": "2775",
+      "nameFa": "رودیان",
+      "nameEn": "Rodian",
+      "provinceId": "IR-20",
+      "countyId": "406",
+      "countyNameFa": "شاهرود",
+      "districtId": "1448",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.3504474,
+      "longitude": 55.0012835,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2637978",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1548",
+      "officialId": 5641,
+      "code": "1548",
+      "nameFa": "ایوانکی",
+      "nameEn": "Eyvanekey",
+      "provinceId": "IR-20",
+      "countyId": "407",
+      "countyNameFa": "گرمسار",
+      "districtId": "1449",
+      "districtNameFa": "ایوانکی",
+      "latitude": 35.3444567,
+      "longitude": 52.0607547,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2423398",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1550",
+      "officialId": 5642,
+      "code": "1550",
+      "nameFa": "گرمسار",
+      "nameEn": null,
+      "provinceId": "IR-20",
+      "countyId": "407",
+      "countyNameFa": "گرمسار",
+      "districtId": "1450",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.21824,
+      "longitude": 52.34085,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "133964",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1543",
+      "officialId": 5643,
+      "code": "1543",
+      "nameFa": "شهمیرزاد",
+      "nameEn": "Shahmirzad",
+      "provinceId": "IR-20",
+      "countyId": "408",
+      "countyNameFa": "مهدی شهر",
+      "districtId": "1451",
+      "districtNameFa": "شهمیرزاد",
+      "latitude": 35.7701041,
+      "longitude": 53.3180235,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q1026064",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1544",
+      "officialId": 5644,
+      "code": "1544",
+      "nameFa": "مهدی شهر",
+      "nameEn": null,
+      "provinceId": "IR-20",
+      "countyId": "408",
+      "countyNameFa": "مهدی شهر",
+      "districtId": "1452",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.71071,
+      "longitude": 53.35394,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "7100777",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2022",
+      "officialId": 5645,
+      "code": "2022",
+      "nameFa": "درجزین",
+      "nameEn": "Darjazin",
+      "provinceId": "IR-20",
+      "countyId": "408",
+      "countyNameFa": "مهدی شهر",
+      "districtId": "1452",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.6284753,
+      "longitude": 53.3081954,
+      "coordinateStatus": "fuzzy",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2423440",
+      "matchScore": 0.857,
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1549",
+      "officialId": 5646,
+      "code": "1549",
+      "nameFa": "آرادان",
+      "nameEn": null,
+      "provinceId": "IR-20",
+      "countyId": "409",
+      "countyNameFa": "آرادان",
+      "districtId": "1453",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.24941,
+      "longitude": 52.49422,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "143129",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2768",
+      "officialId": 5647,
+      "code": "2768",
+      "nameFa": "کهن آباد",
+      "nameEn": "Kohanabad",
+      "provinceId": "IR-20",
+      "countyId": "409",
+      "countyNameFa": "آرادان",
+      "districtId": "1454",
+      "districtNameFa": "کهن آباد",
+      "latitude": 35.2213342,
+      "longitude": 52.510717,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q6425913",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2162",
+      "officialId": 5648,
+      "code": "2162",
+      "nameFa": "میامی",
+      "nameEn": null,
+      "provinceId": "IR-20",
+      "countyId": "410",
+      "countyNameFa": "میامی",
+      "districtId": "1455",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.41092,
+      "longitude": 55.65018,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "124562",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2990",
+      "officialId": 5649,
+      "code": "2990",
+      "nameFa": "رضوان",
+      "nameEn": null,
+      "provinceId": "IR-20",
+      "countyId": "410",
+      "countyNameFa": "میامی",
+      "districtId": "1456",
+      "districtNameFa": "کالپوش",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-1541",
+      "officialId": 5650,
+      "code": "1541",
+      "nameFa": "سرخه",
+      "nameEn": null,
+      "provinceId": "IR-20",
+      "countyId": "411",
+      "countyNameFa": "سرخه",
+      "districtId": "1457",
+      "districtNameFa": "سرخه",
+      "latitude": 35.4633,
+      "longitude": 53.214,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "113952",
+      "renderLabelDefault": true
+    }
+  ]
+}

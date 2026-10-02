@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "1404-2026-10-02",
+  "province": {
+    "id": "IR-26",
+    "code": "26",
+    "nameFa": "قزوین"
+  },
+  "cityCount": 28,
+  "geolocatedCount": 25,
+  "cities": [
+    {
+      "id": "IR-CITY-2159",
+      "officialId": 5825,
+      "code": "2159",
+      "nameFa": "دانسفهان",
+      "nameEn": "Danesfahan",
+      "provinceId": "IR-26",
+      "countyId": "468",
+      "countyNameFa": "بویین زهرا",
+      "districtId": "1599",
+      "districtNameFa": "رامند",
+      "latitude": 35.8157228,
+      "longitude": 49.724416,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2428588",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1538",
+      "officialId": 5826,
+      "code": "1538",
+      "nameFa": "شال",
+      "nameEn": "Shal",
+      "provinceId": "IR-26",
+      "countyId": "468",
+      "countyNameFa": "بویین زهرا",
+      "districtId": "1600",
+      "districtNameFa": "شال",
+      "latitude": 35.8953665,
+      "longitude": 49.7510289,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2421115",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1537",
+      "officialId": 5827,
+      "code": "1537",
+      "nameFa": "بویین زهرا",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "468",
+      "countyNameFa": "بویین زهرا",
+      "districtId": "1601",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.7669,
+      "longitude": 50.0578,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "139903",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2638",
+      "officialId": 5828,
+      "code": "2638",
+      "nameFa": "سگزآباد",
+      "nameEn": "Sagz Abad",
+      "provinceId": "IR-26",
+      "countyId": "468",
+      "countyNameFa": "بویین زهرا",
+      "districtId": "1601",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.7661254,
+      "longitude": 49.9188279,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150716",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2991",
+      "officialId": 5829,
+      "code": "2991",
+      "nameFa": "عصمت آباد",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "468",
+      "countyNameFa": "بویین زهرا",
+      "districtId": "1601",
+      "districtNameFa": "مرکزی",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2577",
+      "officialId": 5830,
+      "code": "2577",
+      "nameFa": "ارداق",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "468",
+      "countyNameFa": "بویین زهرا",
+      "districtId": "1602",
+      "districtNameFa": "دشتابی",
+      "latitude": 36.0531,
+      "longitude": 49.8249,
+      "coordinateStatus": "corroborated",
+      "coordinateSources": [
+        "iran-city-coordinates",
+        "iran-places-api"
+      ],
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2114",
+      "officialId": 5831,
+      "code": "2114",
+      "nameFa": "اسفرورین",
+      "nameEn": "Esfarvarin",
+      "provinceId": "IR-26",
+      "countyId": "469",
+      "countyNameFa": "تاکستان",
+      "districtId": "1603",
+      "districtNameFa": "اسفرورین",
+      "latitude": 35.9368405,
+      "longitude": 49.7401714,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2423545",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2374",
+      "officialId": 5832,
+      "code": "2374",
+      "nameFa": "خرمدشت",
+      "nameEn": "Khorramdasht",
+      "provinceId": "IR-26",
+      "countyId": "469",
+      "countyNameFa": "تاکستان",
+      "districtId": "1604",
+      "districtNameFa": "خرمدشت",
+      "latitude": 35.9280232,
+      "longitude": 49.5033646,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2428545",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2158",
+      "officialId": 5833,
+      "code": "2158",
+      "nameFa": "ضیاآباد",
+      "nameEn": "Ziaabad",
+      "provinceId": "IR-26",
+      "countyId": "469",
+      "countyNameFa": "تاکستان",
+      "districtId": "1605",
+      "districtNameFa": "ضیاءآباد",
+      "latitude": 35.993333,
+      "longitude": 49.447778,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2422793",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1532",
+      "officialId": 5834,
+      "code": "1532",
+      "nameFa": "تاکستان",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "469",
+      "countyNameFa": "تاکستان",
+      "districtId": "1606",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.07057,
+      "longitude": 49.69571,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "113491",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2639",
+      "officialId": 5835,
+      "code": "2639",
+      "nameFa": "نرجه",
+      "nameEn": "Narjeh",
+      "provinceId": "IR-26",
+      "countyId": "469",
+      "countyNameFa": "تاکستان",
+      "districtId": "1606",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.9959407,
+      "longitude": 49.6105455,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q384538",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2494",
+      "officialId": 5836,
+      "code": "2494",
+      "nameFa": "معلم کلایه",
+      "nameEn": "Moallem Kelayeh",
+      "provinceId": "IR-26",
+      "countyId": "470",
+      "countyNameFa": "قزوین",
+      "districtId": "1607",
+      "districtNameFa": "رودبارالموت شرقی",
+      "latitude": 36.448096,
+      "longitude": 50.467801,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150727",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2495",
+      "officialId": 5837,
+      "code": "2495",
+      "nameFa": "رازمیان",
+      "nameEn": "Razmian",
+      "provinceId": "IR-26",
+      "countyId": "470",
+      "countyNameFa": "قزوین",
+      "districtId": "1608",
+      "districtNameFa": "رودبارالموت غربی",
+      "latitude": 36.5420269,
+      "longitude": 50.1983892,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q4359107",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2667",
+      "officialId": 5838,
+      "code": "2667",
+      "nameFa": "سیردان",
+      "nameEn": "Sirdan",
+      "provinceId": "IR-26",
+      "countyId": "470",
+      "countyNameFa": "قزوین",
+      "districtId": "1609",
+      "districtNameFa": "طارم سفلی",
+      "latitude": 36.6473235,
+      "longitude": 49.1887735,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q4358738",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1595",
+      "officialId": 5839,
+      "code": "1595",
+      "nameFa": "قزوین",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "470",
+      "countyNameFa": "قزوین",
+      "districtId": "1610",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.26877,
+      "longitude": 50.0041,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "119505",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2125",
+      "officialId": 5840,
+      "code": "2125",
+      "nameFa": "اقبالیه",
+      "nameEn": "Eqbaliyeh",
+      "provinceId": "IR-26",
+      "countyId": "470",
+      "countyNameFa": "قزوین",
+      "districtId": "1610",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.2281747,
+      "longitude": 49.9067364,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2421098",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2375",
+      "officialId": 5841,
+      "code": "2375",
+      "nameFa": "محمودآبادنمونه",
+      "nameEn": "Mahmood Abad nemooneh",
+      "provinceId": "IR-26",
+      "countyId": "470",
+      "countyNameFa": "قزوین",
+      "districtId": "1610",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.2923071,
+      "longitude": 49.8897931,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150726",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2579",
+      "officialId": 5842,
+      "code": "2579",
+      "nameFa": "کوهین",
+      "nameEn": "Kouhin",
+      "provinceId": "IR-26",
+      "countyId": "470",
+      "countyNameFa": "قزوین",
+      "districtId": "1611",
+      "districtNameFa": "کوهین",
+      "latitude": 36.3722383,
+      "longitude": 49.6494161,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150725",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2637",
+      "officialId": 5843,
+      "code": "2637",
+      "nameFa": "خاکعلی",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "471",
+      "countyNameFa": "آبیک",
+      "districtId": "1612",
+      "districtNameFa": "بشاریات",
+      "latitude": 36.1285,
+      "longitude": 50.1759,
+      "coordinateStatus": "corroborated",
+      "coordinateSources": [
+        "iran-city-coordinates",
+        "iran-places-api"
+      ],
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1535",
+      "officialId": 5844,
+      "code": "1535",
+      "nameFa": "آبیک",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "471",
+      "countyNameFa": "آبیک",
+      "districtId": "1613",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.03993,
+      "longitude": 50.53101,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "144795",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2992",
+      "officialId": 5845,
+      "code": "2992",
+      "nameFa": "زیاران",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "471",
+      "countyNameFa": "آبیک",
+      "districtId": "1613",
+      "districtNameFa": "مرکزی",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2993",
+      "officialId": 5846,
+      "code": "2993",
+      "nameFa": "قشلاق",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "471",
+      "countyNameFa": "آبیک",
+      "districtId": "1613",
+      "districtNameFa": "مرکزی",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2040",
+      "officialId": 5847,
+      "code": "2040",
+      "nameFa": "شریفیه",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "472",
+      "countyNameFa": "البرز",
+      "districtId": "1614",
+      "districtNameFa": "محمدیه",
+      "latitude": 36.2136,
+      "longitude": 50.1532,
+      "coordinateStatus": "corroborated",
+      "coordinateSources": [
+        "iran-city-coordinates",
+        "iran-places-api"
+      ],
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2218",
+      "officialId": 5848,
+      "code": "2218",
+      "nameFa": "محمدیه",
+      "nameEn": "Mohammadiyeh",
+      "provinceId": "IR-26",
+      "countyId": "472",
+      "countyNameFa": "البرز",
+      "districtId": "1614",
+      "districtNameFa": "محمدیه",
+      "latitude": 36.2225503,
+      "longitude": 50.1757406,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q1773458",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2578",
+      "officialId": 5849,
+      "code": "2578",
+      "nameFa": "بیدستان",
+      "nameEn": "Bidestan",
+      "provinceId": "IR-26",
+      "countyId": "472",
+      "countyNameFa": "البرز",
+      "districtId": "1614",
+      "districtNameFa": "محمدیه",
+      "latitude": 36.2308422,
+      "longitude": 50.112183,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2428574",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1539",
+      "officialId": 5850,
+      "code": "1539",
+      "nameFa": "الوند",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "472",
+      "countyNameFa": "البرز",
+      "districtId": "1615",
+      "districtNameFa": "مرکزی",
+      "latitude": 36.1893,
+      "longitude": 50.0643,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "10570",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1536",
+      "officialId": 5851,
+      "code": "1536",
+      "nameFa": "آوج",
+      "nameEn": null,
+      "provinceId": "IR-26",
+      "countyId": "473",
+      "countyNameFa": "آوج",
+      "districtId": "1616",
+      "districtNameFa": "مرکزی",
+      "latitude": 35.57959,
+      "longitude": 49.22313,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "142642",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2517",
+      "officialId": 5852,
+      "code": "2517",
+      "nameFa": "آبگرم",
+      "nameEn": "Abgarm",
+      "provinceId": "IR-26",
+      "countyId": "473",
+      "countyNameFa": "آوج",
+      "districtId": "1617",
+      "districtNameFa": "آبگرم",
+      "latitude": 35.7568728,
+      "longitude": 49.2773509,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2423358",
+      "renderLabelDefault": true
+    }
+  ]
+}

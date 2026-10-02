@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "1404-2026-10-02",
+  "province": {
+    "id": "IR-17",
+    "code": "17",
+    "nameFa": "کهگیلویه و بویراحمد"
+  },
+  "cityCount": 20,
+  "geolocatedCount": 16,
+  "cities": [
+    {
+      "id": "IR-CITY-1512",
+      "officialId": 5544,
+      "code": "1512",
+      "nameFa": "یاسوج",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "377",
+      "countyNameFa": "بویراحمد",
+      "districtId": "1375",
+      "districtNameFa": "مرکزی",
+      "latitude": 30.66824,
+      "longitude": 51.58796,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "66093",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2478",
+      "officialId": 5545,
+      "code": "2478",
+      "nameFa": "گراب سفلی",
+      "nameEn": "Garab-e Sofla",
+      "provinceId": "IR-17",
+      "countyId": "377",
+      "countyNameFa": "بویراحمد",
+      "districtId": "1376",
+      "districtNameFa": "لوداب",
+      "latitude": 30.947222,
+      "longitude": 50.887778,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q1770030",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2083",
+      "officialId": 5546,
+      "code": "2083",
+      "nameFa": "چیتاب",
+      "nameEn": "Chitab",
+      "provinceId": "IR-17",
+      "countyId": "377",
+      "countyNameFa": "بویراحمد",
+      "districtId": "1377",
+      "districtNameFa": "کبگیان",
+      "latitude": 30.795,
+      "longitude": 51.325556,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q4360547",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1080",
+      "officialId": 5547,
+      "code": "1080",
+      "nameFa": "سپیدار",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "377",
+      "countyNameFa": "بویراحمد",
+      "districtId": "1378",
+      "districtNameFa": "سپیدار",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2479",
+      "officialId": 5548,
+      "code": "2479",
+      "nameFa": "قلعه رییسی",
+      "nameEn": "Qaleh Raisi",
+      "provinceId": "IR-17",
+      "countyId": "378",
+      "countyNameFa": "کهگیلویه",
+      "districtId": "1379",
+      "districtNameFa": "چاروسا",
+      "latitude": 31.19,
+      "longitude": 50.441944,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q1770060",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1514",
+      "officialId": 5549,
+      "code": "1514",
+      "nameFa": "دهدشت",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "378",
+      "countyNameFa": "کهگیلویه",
+      "districtId": "1380",
+      "districtNameFa": "مرکزی",
+      "latitude": 30.79337,
+      "longitude": 50.56508,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "136987",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2480",
+      "officialId": 5550,
+      "code": "2480",
+      "nameFa": "دیشموک",
+      "nameEn": "Dishmok",
+      "provinceId": "IR-17",
+      "countyId": "378",
+      "countyNameFa": "کهگیلویه",
+      "districtId": "1381",
+      "districtNameFa": "دیشموک",
+      "latitude": 31.2992068,
+      "longitude": 50.3926455,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q2421547",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2156",
+      "officialId": 5551,
+      "code": "2156",
+      "nameFa": "سوق",
+      "nameEn": "Suq",
+      "provinceId": "IR-17",
+      "countyId": "378",
+      "countyNameFa": "کهگیلویه",
+      "districtId": "1382",
+      "districtNameFa": "سوق",
+      "latitude": 30.8590205,
+      "longitude": 50.4510855,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q219760",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1515",
+      "officialId": 5552,
+      "code": "1515",
+      "nameFa": "دوگنبدان",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "379",
+      "countyNameFa": "گچساران",
+      "districtId": "1383",
+      "districtNameFa": "مرکزی",
+      "latitude": 30.3586,
+      "longitude": 50.7981,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "136014",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2084",
+      "officialId": 5553,
+      "code": "2084",
+      "nameFa": "پاتاوه",
+      "nameEn": "Pataveh",
+      "provinceId": "IR-17",
+      "countyId": "380",
+      "countyNameFa": "دنا",
+      "districtId": "1384",
+      "districtNameFa": "پاتاوه",
+      "latitude": 30.9566982,
+      "longitude": 51.264782,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "Q1770065",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1511",
+      "officialId": 5554,
+      "code": "1511",
+      "nameFa": "سی سخت",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "380",
+      "countyNameFa": "دنا",
+      "districtId": "1385",
+      "districtNameFa": "مرکزی",
+      "latitude": 30.86393,
+      "longitude": 51.4559,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "137013",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1082",
+      "officialId": 5555,
+      "code": "1082",
+      "nameFa": "سرآسیاب یوسفی",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "381",
+      "countyNameFa": "بهمیی",
+      "districtId": "1386",
+      "districtNameFa": "سرآسیاب یوسفی",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2368",
+      "officialId": 5556,
+      "code": "2368",
+      "nameFa": "لیکک",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "381",
+      "countyNameFa": "بهمیی",
+      "districtId": "1387",
+      "districtNameFa": "مرکزی",
+      "latitude": 30.8949,
+      "longitude": 50.0931,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "125688",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-1081",
+      "officialId": 5557,
+      "code": "1081",
+      "nameFa": "قلعه ممبی",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "381",
+      "countyNameFa": "بهمیی",
+      "districtId": "1388",
+      "districtNameFa": "ممبی",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-1513",
+      "officialId": 5558,
+      "code": "1513",
+      "nameFa": "چرام",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "382",
+      "countyNameFa": "چرام",
+      "districtId": "1389",
+      "districtNameFa": "مرکزی",
+      "latitude": 30.75561,
+      "longitude": 50.74522,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "138989",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2828",
+      "officialId": 5559,
+      "code": "2828",
+      "nameFa": "سرفاریاب",
+      "nameEn": "sarfariyab",
+      "provinceId": "IR-17",
+      "countyId": "382",
+      "countyNameFa": "چرام",
+      "districtId": "1390",
+      "districtNameFa": "سرفاریاب",
+      "latitude": 30.807204,
+      "longitude": 50.8465035,
+      "coordinateStatus": "matched",
+      "coordinateSources": [
+        "countries-states-cities-database"
+      ],
+      "sourceId": "150831",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2130",
+      "officialId": 5560,
+      "code": "2130",
+      "nameFa": "باشت",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "383",
+      "countyNameFa": "باشت",
+      "districtId": "1391",
+      "districtNameFa": "مرکزی",
+      "latitude": 30.361,
+      "longitude": 51.15735,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "141124",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2917",
+      "officialId": 5561,
+      "code": "2917",
+      "nameFa": "بوستان",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "383",
+      "countyNameFa": "باشت",
+      "districtId": "1392",
+      "districtNameFa": "بوستان",
+      "latitude": null,
+      "longitude": null,
+      "coordinateStatus": "unresolved",
+      "coordinateSources": [],
+      "renderLabelDefault": false
+    },
+    {
+      "id": "IR-CITY-2129",
+      "officialId": 5562,
+      "code": "2129",
+      "nameFa": "لنده",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "384",
+      "countyNameFa": "لنده",
+      "districtId": "1393",
+      "districtNameFa": "مرکزی",
+      "latitude": 30.98215,
+      "longitude": 50.4206,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "125726",
+      "renderLabelDefault": true
+    },
+    {
+      "id": "IR-CITY-2477",
+      "officialId": 5563,
+      "code": "2477",
+      "nameFa": "مارگون",
+      "nameEn": null,
+      "provinceId": "IR-17",
+      "countyId": "385",
+      "countyNameFa": "مارگون",
+      "districtId": "1395",
+      "districtNameFa": "مرکزی",
+      "latitude": 30.99237,
+      "longitude": 51.08253,
+      "coordinateStatus": "verified",
+      "coordinateSources": [
+        "GeoNames"
+      ],
+      "sourceId": "124771",
+      "renderLabelDefault": true
+    }
+  ]
+}
