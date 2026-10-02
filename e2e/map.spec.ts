@@ -11,7 +11,7 @@ test('home hero gives visitors a scroll guide and opens the explorer', async ({ 
 
 test('province drill-down, hover, keyboard selection, and theme work', async ({ page }) => {
   await page.goto('map')
-  const province = page.locator('[data-region-id="IR-05"]')
+  const province = page.getByRole('group', { name: 'نقشهٔ تعاملی تقسیمات کشوری ایران' }).locator('[data-region-id="IR-05"]')
   await expect(province).toBeVisible()
   await province.hover()
   await expect(page.locator('.map-tooltip')).toContainText('کرمانشاه')

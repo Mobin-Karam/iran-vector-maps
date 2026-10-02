@@ -15,3 +15,5 @@ export async function fetchIranMapAsset<T>(path: Parameters<typeof iranMapAssetU
   if (!response.ok) throw new Error(`Unable to load Iran map asset: ${response.status}`)
   return response.json() as Promise<T>
 }
+
+export { fetchIranProvinceAsset, iranProvinceAssetUrl, iranProvinceAssets, iranProvinceIds, isIranProvinceId, type IranProvinceAsset, type IranProvinceId } from './province.js'

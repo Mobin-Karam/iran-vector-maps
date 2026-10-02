@@ -10,8 +10,8 @@ import './osm.css'
 import './metric.css'
 import './city-layer.css'
 
-interface Props { data: MapCollection; selectedId?: string; onSelect: (id: string) => void; onOpen: (region: MapFeatureProperties) => void; onHover: (region: MapFeatureProperties | null, point?: { x: number; y: number }) => void; onCityHover?: (city: CityLocation | null, point?: { x: number; y: number }) => void; appearance?: MapAppearance; ariaLabel?: string; showOsmBasemap?: boolean; metricValues?: ReadonlyMap<string, number>; cities?: readonly CityLocation[] }
-export function GeoMap({ data, selectedId, onSelect, onOpen, onHover, onCityHover, appearance, ariaLabel = 'نقشهٔ تعاملی تقسیمات کشوری ایران', showOsmBasemap = false, metricValues, cities = [] }: Props) {
+interface Props { data: MapCollection; selectedId?: string; onSelect: (id: string) => void; onOpen: (region: MapFeatureProperties) => void; onHover: (region: MapFeatureProperties | null, point?: { x: number; y: number }) => void; onCityHover?: (city: CityLocation | null, point?: { x: number; y: number }) => void; appearance?: MapAppearance; ariaLabel?: string; showOsmBasemap?: boolean; metricValues?: ReadonlyMap<string, number>; cities?: readonly CityLocation[]; listenForMetrics?: boolean }
+export function GeoMap({ data, selectedId, onSelect, onOpen, onHover, onCityHover, appearance, ariaLabel = 'نقشهٔ تعاملی تقسیمات کشوری ایران', showOsmBasemap = false, metricValues, cities = [], listenForMetrics = true }: Props) {
   const width = 900; const height = 620
   const theme = { ...defaultMapAppearance, ...appearance }
   const style = { '--region-fill': theme.regionFill, '--region-hover': theme.regionHoverFill, '--region-selected': theme.regionSelectedFill, '--region-border': theme.borderColor, '--water-label': theme.waterColor } as CSSProperties
@@ -19,7 +19,7 @@ export function GeoMap({ data, selectedId, onSelect, onOpen, onHover, onCityHove
   const path = useMemo(() => geoPath(projection), [projection]); const caspian = projection([51.8, 38.5]); const gulf = projection([50.4, 27.3])
   const [localMetrics, setLocalMetrics] = useState<ReadonlyMap<string, number>>(new Map())
   const hover = (event: PointerEvent<SVGPathElement>, region: MapFeatureProperties) => onHover(region, { x: event.clientX, y: event.clientY })
-  useEffect(() => { const sync = (event: Event) => { const records = (event as CustomEvent<RegionMetric[]>).detail; setLocalMetrics(new Map(records.map((record) => [record.regionId, record.value]))) }; window.addEventListener('iran-map:metrics', sync); return () => window.removeEventListener('iran-map:metrics', sync) }, [])
+  useEffect(() => { if (!listenForMetrics) return; const sync = (event: Event) => { const records = (event as CustomEvent<RegionMetric[]>).detail; setLocalMetrics(new Map(records.map((record) => [record.regionId, record.value]))) }; window.addEventListener('iran-map:metrics', sync); return () => window.removeEventListener('iran-map:metrics', sync) }, [listenForMetrics])
   const values = metricValues ?? localMetrics
   const maximum = Math.max(...values.values(), 1)
   const metricColors = useMemo(() => new Map([...values].map(([id, value]) => [id, `hsl(${210 - Math.round(value / maximum * 170)} 68% ${74 - Math.round(value / maximum * 28)}%)`])), [values, maximum])

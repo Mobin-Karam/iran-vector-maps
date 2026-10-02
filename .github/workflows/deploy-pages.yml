@@ -28,6 +28,9 @@ jobs:
       - run: npm run data:build
       - run: npm test
       - run: npm run build
+      # GitHub Pages has no SPA rewrite rule. Serving the built entrypoint as
+      # 404.html keeps shared province/county URLs renderable after a refresh.
+      - run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
