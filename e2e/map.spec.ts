@@ -69,12 +69,11 @@ test('readable county URLs resolve to the matching county and keep legacy IDs co
 
 test('studio provides the full client-side data, style, and export workflow', async ({ page }) => {
   await page.goto('studio')
-  await expect(page.getByRole('navigation', { name: 'مراحل ساخت نقشه' })).toBeVisible()
-  await expect(page.locator('svg.map-svg')).toBeVisible()
+  await expect(page.getByRole('navigation', { name: 'ناوبری اصلی' })).toBeVisible()
+  await expect(page.getByRole('region', { name: 'ابزارهای نقشه' })).toBeVisible()
+  await expect(page.locator('svg.geo-map').first()).toBeVisible()
   await page.getByRole('button', { name: 'طراحی' }).click()
-  await expect(page.getByRole('button', { name: 'کبالت' })).toBeVisible()
-  await page.getByRole('button', { name: 'خروجی' }).click()
-  await expect(page.getByRole('button', { name: 'PNG شفاف' }).first()).toBeVisible()
-  await page.getByRole('button', { name: 'EN' }).click()
-  await expect(page.getByRole('navigation', { name: 'Map workflow' })).toBeVisible()
+  await expect(page.getByRole('dialog', { name: 'رنگ و خروجی نقشه' })).toBeVisible()
+  await page.locator('.studio-step-tabs button').filter({ hasText: 'خروجی' }).click()
+  await expect(page.getByRole('dialog', { name: 'رنگ و خروجی نقشه' })).toBeVisible()
 })

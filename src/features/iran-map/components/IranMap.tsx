@@ -20,7 +20,8 @@ import './performance.css'
 
 const levels: Record<AdministrativeRegion['level'], string> = { country: 'کشور', province: 'استان', county: 'شهرستان', district: 'بخش', city: 'شهر', 'rural-district': 'دهستان', settlement: 'روستا / آبادی' }
 
-export function IranMap() {
+export function IranMap({ workspace = 'explorer' }: { workspace?: 'explorer' | 'studio' }) {
+  const isStudio = workspace === 'studio'
   const navigate = useNavigate()
   const { provinceSlug, countySlug } = useParams()
   const [regions, setRegions] = useState<AdministrativeRegion[]>([])
@@ -52,7 +53,7 @@ export function IranMap() {
   const selected = regions.find((region) => region.id === selectedId) ?? active
   const crumbs = useMemo(() => { const items: AdministrativeRegion[] = []; let current = active; while (current) { items.unshift(current); current = regions.find((region) => region.id === current?.parentId) } return items }, [active, regions])
   useEffect(() => { document.title = active ? `نقشه ${levels[active.level]} ${active.nameFa}` : 'نقشه تقسیمات کشوری ایران' }, [active])
-  usePageSeo({ title: active ? `نقشه ${active.nameFa}` : 'کاوش نقشهٔ ایران', description: active ? `مرزها، شهرستان‌ها و نقاط شهرِ ${active.nameFa} را روی نقشهٔ برداری ایران بررسی کنید.` : 'کاوش نقشهٔ برداری استان‌ها و شهرستان‌های ایران، با دادهٔ قابل اتصال برای React.', path: active ? regionUrl(active, regions) : '/map' })
+  usePageSeo({ title: isStudio ? 'نقشه‌ساز دادهٔ ایران' : active ? `نقشه ${active.nameFa}` : 'کاوش نقشهٔ ایران', description: isStudio ? 'داده‌های منطقه‌ای را به مرزهای واقعی ایران وصل کنید، ظاهر را تنظیم کنید و SVG یا تصویر دریافت کنید.' : active ? `مرزها، شهرستان‌ها و نقاط شهرِ ${active.nameFa} را روی نقشهٔ برداری ایران بررسی کنید.` : 'کاوش نقشهٔ برداری استان‌ها و شهرستان‌های ایران، با دادهٔ قابل اتصال برای React.', path: isStudio ? '/studio' : active ? regionUrl(active, regions) : '/map' })
   const mapTitle = province ? `شهرستان‌های استان ${province.nameFa}` : 'استان‌های ایران'
   const mapHint = county ? `شهرستان ${county.nameFa} انتخاب شده است؛ برای مقایسه، روی مرزهای دیگر حرکت کنید.` : province ? 'برای دیدن اطلاعات، یک شهرستان را انتخاب کنید.' : 'برای ورود به هر استان روی آن کلیک کنید.'
   const visibleCities = useMemo(() => province ? cities?.cities.filter((city) => !county || city.countyId === county.id) ?? [] : [], [cities, county, province])
@@ -78,8 +79,8 @@ export function IranMap() {
     }
   }
 
-  return <SiteChrome className="map-site" showFooter={false}><main className={dark ? 'app map-app dark' : 'app map-app'}>
-    <MapWorkspaceHeader regions={regions} title={mapTitle} hint={mapHint} dark={dark} onSearchSelect={(region) => { setSelectedId(region.id); navigate(regionUrl(region, regions)) }} onReset={() => navigate('/map')} onLocate={() => setSelectedId(activeId)} onThemeToggle={() => setDark(!dark)} />
+  return <SiteChrome className={isStudio ? 'map-site studio-site' : 'map-site'} showFooter={false}><main className={`${dark ? 'app map-app dark' : 'app map-app'}${isStudio ? ' is-studio' : ''}`}>
+    <MapWorkspaceHeader regions={regions} workspaceLabel={isStudio ? 'استودیو نقشه' : 'نقشه‌ساز'} title={isStudio ? 'ساخت نقشهٔ داده‌محور' : mapTitle} hint={isStudio ? 'داده را وارد کنید، ظاهر را بسازید و خروجی بگیرید.' : mapHint} dark={dark} onSearchSelect={(region) => { setSelectedId(region.id); navigate(regionUrl(region, regions)) }} onReset={() => navigate(isStudio ? '/studio' : '/map')} onLocate={() => setSelectedId(activeId)} onThemeToggle={() => setDark(!dark)} />
     <nav className="breadcrumbs" aria-label="مسیر نقشه">{crumbs.map((crumb, index) => <span key={crumb.id}>{index > 0 && <ChevronLeft size={15} />}<button disabled={index === crumbs.length - 1} onClick={() => navigate(regionUrl(crumb, regions))}>{crumb.nameFa}</button></span>)}</nav>
     <section className="map-layout studio-workspace">
       <aside className="details studio-control-panel" aria-live="polite">
@@ -90,11 +91,11 @@ export function IranMap() {
         </div>
         <div className="studio-panel-card">
             {studioStep === 'data' && <>
-              <p className="studio-kicker">گام ۱ · داده</p><h3>اتصال داده به مرزها</h3><p>JSON، CSV یا Excel را وارد کنید؛ شناسه‌ها اعتبارسنجی و مقدارها فوراً روی نقشه نمایش داده می‌شوند.</p>
+              <p className="studio-kicker">گام ۱ · داده</p><h3>{isStudio ? 'داده را به نقشهٔ واقعی وصل کنید' : 'اتصال داده به مرزها'}</h3><p>JSON، CSV یا Excel را وارد کنید؛ شناسه‌ها اعتبارسنجی و مقدارها فوراً روی همان مرزهای استان و شهرستان نمایش داده می‌شوند.</p>
               <button className="studio-primary" type="button" onClick={() => openStudioTool('data')}>ورود داده</button>
             </>}
             {studioStep === 'style' && <>
-              <p className="studio-kicker">گام ۲ · طراحی</p><h3>ظاهر خروجی را بسازید</h3><p>پالت، مرز و برچسب‌ها را برای همین نمای ایران، استان یا شهرستان تنظیم کنید.</p>
+              <p className="studio-kicker">گام ۲ · طراحی</p><h3>ظاهر خروجی را بسازید</h3><p>پالت، مرز، برچسب و پس‌زمینه را برای همین نمای ایران، استان یا شهرستان تنظیم کنید.</p>
               <button className="studio-primary" type="button" onClick={() => openStudioTool('style')}>تنظیم ظاهر</button>
             </>}
             {studioStep === 'export' && <>

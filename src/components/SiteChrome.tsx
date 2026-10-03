@@ -17,7 +17,7 @@ export function SiteChrome({ children, className = '', showFooter = true }: { ch
   return <div className={`site-shell ${className}`} dir="rtl">
     <header className="site-header">
       <Link className="site-brand" to="/" aria-label="صفحهٔ اصلی Iran Vector Maps"><span className="site-brand-mark" aria-hidden="true" /><span>Iran Vector Maps</span></Link>
-      <nav className="site-links" aria-label="ناوبری اصلی">{links.map((link) => <Link key={link.to} className={location.pathname === link.to ? 'is-current' : undefined} to={link.to}>{link.label}</Link>)}</nav>
+      <nav className="site-links" aria-label="ناوبری اصلی">{links.map((link) => <Link key={link.to} className={location.pathname === link.to || (link.to === '/map' && location.pathname.startsWith('/map/')) ? 'is-current' : undefined} to={link.to}>{link.label}</Link>)}</nav>
       <div className="site-socials" dir="ltr" aria-label="پیوندهای پروژه">
         <a href="https://github.com/Mobin-Karam/iran-vector-maps" target="_blank" rel="noreferrer" aria-label="GitHub repository" title="GitHub repository"><GitHubMark width={18} height={18} /></a>
         <a href="https://www.linkedin.com/in/mobin-karam/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><LinkedInMark width={18} height={18} /></a>

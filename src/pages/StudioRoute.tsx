@@ -1,7 +1,5 @@
-import { lazy, Suspense } from 'react'
-
-const StudioReferencePage = lazy(() => import('./StudioReferencePage').then(({ StudioReferencePage: Component }) => ({ default: Component })))
+import { IranMap } from '../features/iran-map/components/IranMap'
 
 export function StudioRoute() {
-  return <Suspense fallback={<main className="route-loading" dir="rtl">در حال آماده‌سازی نقشه‌ساز…</main>}><StudioReferencePage /></Suspense>
+  return <IranMap workspace="studio" />
 }

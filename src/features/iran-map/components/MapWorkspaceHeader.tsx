@@ -11,12 +11,13 @@ interface Props {
   onReset: () => void
   onLocate: () => void
   onThemeToggle: () => void
+  workspaceLabel?: string
 }
 
-export function MapWorkspaceHeader({ title, hint, dark, onReset, onLocate, onThemeToggle }: Props) {
+export function MapWorkspaceHeader({ title, hint, dark, onReset, onLocate, onThemeToggle, workspaceLabel = 'نقشه‌ساز' }: Props) {
   return <section className="map-workspace-header" aria-label="ابزارهای نقشه">
     <div className="map-workspace-brand">
-      <div className="workspace-brand"><span className="workspace-brand-mark" aria-hidden="true">✦</span><span>نقشه ساز</span></div>
+      <div className="workspace-brand"><span className="workspace-brand-mark" aria-hidden="true">✦</span><span>{workspaceLabel}</span></div>
       <div className="workspace-context"><strong>{title}</strong><span>{hint}</span></div>
     </div>
     <div className="map-workspace-actions">
