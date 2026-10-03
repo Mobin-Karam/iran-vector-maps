@@ -40,7 +40,7 @@ test('data workspace imports JSON and exports valid SVG', async ({ page }) => {
   await page.getByLabel('بستن').click()
   await page.getByLabel('رنگ و خروجی').click()
   const download = page.waitForEvent('download')
-  await page.getByRole('button', { name: 'دریافت SVG' }).click()
+  await page.getByRole('button', { name: 'SVG' }).click()
   expect((await download).suggestedFilename()).toBe('iran-administrative-map.svg')
 })
 
@@ -50,4 +50,16 @@ test('province maps show sourced city markers and county context', async ({ page
   await expect(city).toBeVisible()
   await city.hover()
   await expect(page.locator('.map-tooltip')).toContainText('شهرستان')
+})
+
+test('studio provides the full client-side data, style, and export workflow', async ({ page }) => {
+  await page.goto('studio')
+  await expect(page.getByRole('navigation', { name: 'مراحل ساخت نقشه' })).toBeVisible()
+  await expect(page.locator('svg.map-svg')).toBeVisible()
+  await page.getByRole('button', { name: 'طراحی' }).click()
+  await expect(page.getByRole('button', { name: 'کبالت' })).toBeVisible()
+  await page.getByRole('button', { name: 'خروجی' }).click()
+  await expect(page.getByRole('button', { name: 'PNG شفاف' }).first()).toBeVisible()
+  await page.getByRole('button', { name: 'EN' }).click()
+  await expect(page.getByRole('navigation', { name: 'Map workflow' })).toBeVisible()
 })
