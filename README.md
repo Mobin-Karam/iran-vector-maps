@@ -4,11 +4,11 @@
 
 ![Iran Vector Maps cover](docs/assets/iran-vector-maps-cover.png)
 
-Fast, accessible, data-driven SVG maps for React, with a complete Iran province and county explorer. The project includes a reusable package, a bilingual demo website, and a reproducible pipeline for verified geographic assets.
+Fast, accessible, data-driven SVG maps for React, with a complete Iran province and county explorer. The project includes a reusable package, a bilingual demo website, readable shareable URLs, and a reproducible pipeline for verified geographic assets.
 
 ## Live demo
 
-After GitHub Pages is enabled, visit **https://mobin-karam.github.io/iran-vector-maps/**. The demo supports Persian RTL and English LTR, province-to-county drill-down, hover labels, search, JSON/CSV data overlays, custom colors, and SVG/PNG export.
+After GitHub Pages is enabled, visit **https://mobin-karam.github.io/iran-vector-maps/**. The demo supports Persian RTL and English LTR, province-to-county drill-down, hover labels, search, JSON/CSV data overlays, custom colors, and SVG/PNG export. Public links are readable, such as `/map/province/kermanshah/county/sonqor`; legacy ID links redirect to the canonical name route.
 
 ## Install the React package
 
@@ -81,7 +81,7 @@ Static hosts need an SPA fallback to `index.html` for deep map URLs. The include
 - Native, keyboard-accessible SVG rendering for `Polygon` and `MultiPolygon` geometry.
 - 31 province maps and county layers loaded on demand from static TopoJSON, plus 1,481 city records with 1,154 sourced point markers.
 - The `iran-vector-maps-data/province` entry point for installing the data companion once and loading any one province on demand.
-- Stable region IDs, Persian/English names, tooltips, search, and province-to-county navigation.
+- Stable region IDs and codes for data, plus Persian/English names and readable slugs for URLs, tooltips, search, and province-to-county navigation.
 - JSON and CSV metric import with validation, merge/replace behavior, local persistence, active-metric selection, color scales, value labels, legend, and unknown-ID reporting.
 - Host-controlled theme, colors, selection, details, and SVG export; the demo also offers PNG export.
 - A compact package suitable for dashboards, reporting, public services, research, health, education, logistics, sales territories, and any regional dataset.
@@ -102,6 +102,7 @@ Sources, attribution, scope, and known limits are documented in [DATA_SOURCES.md
 - [AI and application integration](docs/AI_AGENT_INTEGRATION.md)
 - [Map-data update workflow](docs/UPDATING_MAP_DATA.md)
 - [Province-level asset loading](docs/PROVINCE_ASSETS.md)
+- [Routing, slugs, and stable identifiers](docs/ROUTING_AND_IDENTIFIERS.md)
 - [Implemented and planned package features](docs/PACKAGE_FEATURES.md)
 - [Reliability, coverage, and correction policy](docs/RELIABILITY.md)
 - [Release and versioning policy](docs/RELEASE_POLICY.md)
@@ -119,5 +120,5 @@ The application and package source code are available under the [MIT License](LI
 Every Git tag matching `v*` runs the release workflow. It validates the reusable package, creates the installable `iran-vector-maps-<version>.tgz` artifact, and attaches it to the corresponding GitHub Release. Install a release artifact directly when npm is not part of your delivery flow:
 
 ```bash
-npm install https://github.com/Mobin-Karam/iran-vector-maps/releases/download/v0.5.4/iran-vector-maps-0.5.4.tgz
+npm install https://github.com/Mobin-Karam/iran-vector-maps/releases/download/v0.6.0/iran-vector-maps-0.6.0.tgz
 ```

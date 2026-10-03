@@ -5,7 +5,7 @@
 | Level | Geometry | Coverage | Validation |
 | --- | --- | --- | --- |
 | Provinces | Polygon/MultiPolygon | 31 of 31 | Stable IDs, geometry, and parent `IR` checked in CI |
-| Counties | Polygon/MultiPolygon | 466 current features | Stable IDs, geometry, correct province parent, and duplicate checks in CI |
+| Counties | Polygon/MultiPolygon | 478 current features | Stable IDs, codes, slugs, geometry, correct province parent, and duplicate checks in CI |
 | Cities | Reference points only | 1,481 names; 1,154 placed points across 31 provinces and 484 counties | Stable city and parent IDs, per-record coordinate status, and duplicate checks in CI |
 | Districts, rural districts, settlements | Not shipped | No geometry claim | Metadata must not be displayed as a boundary |
 

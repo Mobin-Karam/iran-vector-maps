@@ -1,8 +1,24 @@
 {
   "name": "iran-vector-maps",
-  "version": "0.5.4",
+  "version": "0.6.0",
   "description": "Accessible, data-driven SVG administrative maps for React, with first-class Iran support.",
   "releases": [
+    {
+      "version": "0.6.0",
+      "date": "2026-10-03",
+      "titleFa": "مسیرهای خوانا و فضای کار نقشه",
+      "titleEn": "Readable routes and the map workbench",
+      "itemsFa": [
+        "مسیر نام‌محور برای استان‌ها و شهرستان‌ها",
+        "کد و شناسهٔ پایدار در داده و ورود شاخص‌ها",
+        "فضای کار Studio برای داده، طراحی و خروجی"
+      ],
+      "itemsEn": [
+        "Name-based province and county routes",
+        "Stable codes and IDs retained for data imports",
+        "Studio workbench for data, design, and export"
+      ]
+    },
     {
       "version": "0.5.4",
       "date": "2026-10-03",

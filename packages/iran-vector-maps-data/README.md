@@ -15,6 +15,21 @@ console.log(iranMapDataset.provinces) // 31
 
 The assets are served from the project’s GitHub Pages deployment. Pin a package version when reproducibility matters and retain attribution from the repository’s `DATA_SOURCES.md`.
 
+## Readable routes and stable identifiers
+
+The companion data catalog exposes a human-readable `slug` for public URLs and keeps `id`/`code` for joins, imports, and asset loading. URLs are for people; codes are for data. For example, the demo route is `/map/province/kermanshah`, while the matching stable province code remains `IR-05`.
+
+```ts
+import { fetchIranMapRegions, findIranMapRegion, iranMapRegionUrl } from 'iran-vector-maps-data'
+
+const regions = await fetchIranMapRegions()
+const kermanshah = findIranMapRegion(regions, 'kermanshah', 'province')
+if (kermanshah) {
+  console.log(kermanshah.code) // IR-05
+  console.log(iranMapRegionUrl(kermanshah, regions)) // /map/province/kermanshah
+}
+```
+
 ## Publishing
 
 Maintainers publish this package together with `iran-vector-maps` by pushing a matching `vX.Y.Z` tag. The repository release workflow uses npm trusted publishing, rather than a long-lived npm token; see the root [release policy](../../docs/RELEASE_POLICY.md).
@@ -49,6 +64,6 @@ The interactive demo copies the precise province or county snippet for any selec
 ## Coverage
 
 - Provinces: 31/31, polygon geometry.
-- Counties: 466 in the current verified dataset, loaded one province at a time.
+- Counties: 478 current polygon features, loaded one province at a time.
 - Cities: 1,481 named records; 1,154 sourced point markers across 31 province assets.
 - Districts, rural districts, and settlements: metadata only; no geometry is claimed.

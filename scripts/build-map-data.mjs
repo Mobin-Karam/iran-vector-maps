@@ -9,6 +9,8 @@ const normalize = (value = '') => value.replace(/ي/g, 'ی').replace(/ك/g, 'ک'
 const readJson = async (path) => JSON.parse(await readFile(path, 'utf8'));
 const writeJson = async (path, value) => writeFile(path, `${JSON.stringify(value)}\n`);
 const countyName = (name) => normalize(name).replace(/^شهرستان\s+/, '');
+const englishFallbacks = new Map([['گنبکی', 'Gunbaki'], ['جازموریان', 'Jazmurian'], ['مروست', 'Marvast']]);
+const slugify = (value) => String(value ?? '').toLowerCase().replace(/\bcounty\b/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 const signedArea = (ring) => ring.slice(0, -1).reduce((total, point, index) => { const next = ring[index + 1]; return total + point[0] * next[1] - next[0] * point[1] }, 0);
 const rewind = (geometry) => {
   const rings = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.type === 'MultiPolygon' ? geometry.coordinates : [];
@@ -16,7 +18,11 @@ const rewind = (geometry) => {
   return geometry;
 };
 
-await rm(output, { recursive: true, force: true });
+// City point assets are generated and verified separately. Rebuilding boundary
+// topology must not remove them, otherwise city markers disappear from the app.
+await mkdir(output, { recursive: true });
+await rm(join(output, 'regions'), { recursive: true, force: true });
+await Promise.all(['manifest.json', 'provinces.topo.json', 'regions.json', 'search-index.json'].map((file) => rm(join(output, file), { force: true })));
 await mkdir(join(output, 'regions'), { recursive: true });
 
 const [boundarySource, provinceSource, countySource, countyGeometrySource, countyReadme, officialProvinces, officialCounties, officialDistricts, officialCities] = await Promise.all([
@@ -38,7 +44,7 @@ folderByProvinceName.set(normalize('کهگیلویه و بویر احمد'), 'IR
 folderByProvinceName.set(normalize('کهگیلویه و بویراحمد'), 'IR-17');
 const officialProvinceByName = new Map(officialProvinces.map((region) => [normalize(region.name), region]));
 const count = (items, key, value) => items.filter((item) => item[key] === value).length;
-const regions = [{ id: 'IR', nameFa: 'ایران', nameEn: 'Iran', level: 'country', parentId: null, source: 'OpenStreetMap / Open Admin Data', children: { provinces: 31 } }];
+const regions = [{ id: 'IR', code: 'IR', slug: 'iran', nameFa: 'ایران', nameEn: 'Iran', level: 'country', parentId: null, source: 'OpenStreetMap / Open Admin Data', children: { provinces: 31 } }];
 const provinceIndex = new Map();
 
 for (const feature of countyGeometrySource.features) {
@@ -51,6 +57,7 @@ for (const feature of countyGeometrySource.features) {
   const region = {
     id: code,
     code,
+    slug: slugify(properties['name:en'] ?? meta?.name?.en),
     nameFa,
     nameEn: properties['name:en'] ?? meta?.name?.en,
     level: 'province',
@@ -79,7 +86,9 @@ for (const province of [...provinceIndex.values()]) {
         const officialProvince = officialProvinceByName.get(province.nameFa);
         const official = officialCounties.find((item) => item.province_id === officialProvince?.id && normalize(item.name) === nameFa);
         const id = official ? String(official.id) : meta?.id ?? `${province.id}-county-${feature.properties?.id ?? index + 1}`;
-        return { ...feature, id, geometry: rewind(structuredClone(feature.geometry)), properties: { id, nameFa, nameEn: tags['name:en'], level: 'county', parentId: province.id, sourceId: String(feature.properties?.id ?? '') } };
+        const nameEn = tags['name:en'] ?? englishFallbacks.get(nameFa);
+        const slug = slugify(nameEn) || `county-${slugify(nameFa) || index + 1}`;
+        return { ...feature, id, geometry: rewind(structuredClone(feature.geometry)), properties: { id, code: id, slug, nameFa, nameEn, level: 'county', parentId: province.id, sourceId: String(feature.properties?.id ?? '') } };
       });
     const topologyData = topology({ counties: { type: 'FeatureCollection', features } });
     await mkdir(join(output, 'regions', province.id), { recursive: true });
@@ -87,7 +96,7 @@ for (const province of [...provinceIndex.values()]) {
     for (const feature of features) {
       const officialProvince = officialProvinceByName.get(province.nameFa);
       const official = officialCounties.find((item) => item.province_id === officialProvince?.id && normalize(item.name) === feature.properties.nameFa);
-      regions.push({ id: feature.id, nameFa: feature.properties.nameFa, nameEn: feature.properties.nameEn, level: 'county', parentId: province.id, source: 'OpenStreetMap geometry + رسمی تقسیمات کشوری metadata', sourceId: feature.properties.sourceId, geometryFile: `regions/${province.id}/counties.topo.json`, children: official ? { districts: count(officialDistricts, 'county_id', official.id), cities: count(officialCities, 'county_id', official.id) } : undefined, childNames: official ? { districts: officialDistricts.filter((item) => item.county_id === official.id).map((item) => item.name).sort((a, b) => a.localeCompare(b, 'fa')).slice(0, 8), cities: officialCities.filter((item) => item.county_id === official.id).map((item) => item.name).sort((a, b) => a.localeCompare(b, 'fa')).slice(0, 8) } : undefined });
+      regions.push({ id: feature.id, code: feature.id, slug: feature.properties.slug, nameFa: feature.properties.nameFa, nameEn: feature.properties.nameEn, level: 'county', parentId: province.id, source: 'OpenStreetMap geometry + رسمی تقسیمات کشوری metadata', sourceId: feature.properties.sourceId, geometryFile: `regions/${province.id}/counties.topo.json`, children: official ? { districts: count(officialDistricts, 'county_id', official.id), cities: count(officialCities, 'county_id', official.id) } : undefined, childNames: official ? { districts: officialDistricts.filter((item) => item.county_id === official.id).map((item) => item.name).sort((a, b) => a.localeCompare(b, 'fa')).slice(0, 8), cities: officialCities.filter((item) => item.county_id === official.id).map((item) => item.name).sort((a, b) => a.localeCompare(b, 'fa')).slice(0, 8) } : undefined });
     }
   } catch {
     // A missing county asset is represented in the manifest rather than fabricated.
@@ -97,10 +106,10 @@ for (const province of [...provinceIndex.values()]) {
 const provinceFeatures = countyGeometrySource.features.map((feature) => {
   const code = folderByProvinceName.get(normalize(feature.properties?.['name:fa']));
   const region = provinceIndex.get(code);
-  return { ...feature, id: code, geometry: rewind(structuredClone(feature.geometry)), properties: { id: code, nameFa: region?.nameFa ?? normalize(feature.properties?.name), nameEn: region?.nameEn, level: 'province', parentId: 'IR' } };
+  return { ...feature, id: code, geometry: rewind(structuredClone(feature.geometry)), properties: { id: code, code, slug: region?.slug, nameFa: region?.nameFa ?? normalize(feature.properties?.name), nameEn: region?.nameEn, level: 'province', parentId: 'IR' } };
 });
 await writeJson(join(output, 'provinces.topo.json'), topology({ provinces: { type: 'FeatureCollection', features: provinceFeatures } }));
 await writeJson(join(output, 'regions.json'), regions);
-await writeJson(join(output, 'search-index.json'), regions.map(({ id, nameFa, nameEn, level, parentId, code }) => ({ id, nameFa, nameEn, level, parentId, code })));
+await writeJson(join(output, 'search-index.json'), regions.map(({ id, nameFa, nameEn, level, parentId, code, slug }) => ({ id, nameFa, nameEn, level, parentId, code, slug })));
 await writeJson(join(output, 'manifest.json'), { version: 1, datasetVersion: '2026-10-01', generatedAt: new Date().toISOString(), country: { id: 'IR', nameFa: 'ایران', nameEn: 'Iran' }, levels: ['province', 'county', 'district', 'city', 'rural-district', 'settlement'], availableGeometry: { provinces: true, counties: [...provinceIndex.keys()] }, unavailable: ['district', 'city', 'rural-district', 'settlement'] });
 console.log(`Built ${provinceFeatures.length} province geometries and ${regions.filter((region) => region.level === 'county').length} county geometries.`);

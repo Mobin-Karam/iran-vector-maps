@@ -2,6 +2,12 @@
 
 This changelog follows the package version in `package.json`. Unreleased changes belong under a future version heading and are not advertised as published until `npm publish` succeeds.
 
+## 0.6.0 — 2026-10-03
+
+- Added readable, canonical province and county routes to the demo while preserving stable IDs and codes for imported metrics.
+- Added a public region catalog contract with `slug`, `code`, Persian name, and English name fields.
+- Reworked the map route into the focused Studio workbench interface, retaining data import, drill-down, customization, and export workflows.
+
 ## 0.5.4 — 2026-10-03
 
 - Made exported SVG files self-contained by writing explicit, portable region fill and border attributes.

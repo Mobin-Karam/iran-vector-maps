@@ -1,7 +1,7 @@
 export const iranMapDataset = {
   version: '2026-10-01',
   provinces: 31,
-  counties: 466,
+  counties: 478,
   source: 'OpenStreetMap-derived boundaries with documented administrative metadata',
   license: 'See DATA_SOURCES.md in the Iran Vector Maps repository.',
 } as const
@@ -17,3 +17,4 @@ export async function fetchIranMapAsset<T>(path: Parameters<typeof iranMapAssetU
 }
 
 export { fetchIranCountyFeature, fetchIranProvinceAsset, iranProvinceAssetUrl, iranProvinceAssets, iranProvinceIds, isIranProvinceId, type IranProvinceAsset, type IranProvinceId } from './province.js'
+export { fetchIranMapRegions, findIranMapRegion, iranMapRegionUrl, type IranMapRegion } from './regions.js'

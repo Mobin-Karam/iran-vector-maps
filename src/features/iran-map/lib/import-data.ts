@@ -105,11 +105,11 @@ export function parseRegionValueRows(input: unknown): ImportRegionRow[] {
 
 export function resolveImportedRegionRows(
   rows: Array<ImportRegionRow>,
-  regions: Array<{ id: string; nameFa?: string; nameEn?: string; slug?: string }>,
+  regions: Array<{ id: string; code?: string; nameFa?: string; nameEn?: string; slug?: string }>,
 ): ResolvedImportRow[] {
   const lookup = new Map<string, string>()
   for (const region of regions) {
-    for (const key of [region.id, region.nameFa, region.nameEn, region.slug].filter((value): value is string => Boolean(value))) {
+    for (const key of [region.id, region.code, region.nameFa, region.nameEn, region.slug].filter((value): value is string => Boolean(value))) {
       lookup.set(normalizeKey(key), region.id)
     }
   }
