@@ -7,6 +7,7 @@ import { GitHubMark, LinkedInMark } from './SocialIcons'
 const links = [
   { to: '/', label: 'خانه' },
   { to: '/map', label: 'نقشه' },
+  { to: '/studio', label: 'نقشه‌ساز' },
   { to: '/about', label: 'راهنما' },
   { to: '/package', label: 'بسته' },
 ]
