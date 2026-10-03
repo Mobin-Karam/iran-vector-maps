@@ -15,8 +15,19 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: npm
+          node-version: 22.14.0
+          registry-url: https://registry.npmjs.org
+      - name: Use npm CLI with trusted-publisher support
+        run: npm install --global npm@^11.5.1
+      - name: Verify tag and package versions match
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFileSync } from 'node:fs'
+          const version = process.env.GITHUB_REF_NAME.replace(/^v/, '')
+          for (const path of ['packages/iran-vector-maps/package.json', 'packages/iran-vector-maps-data/package.json']) {
+            if (JSON.parse(readFileSync(path, 'utf8')).version !== version) throw new Error(`${path} must match ${process.env.GITHUB_REF_NAME}`)
+          }
+          NODE
       - run: npm ci
       - run: npm --prefix packages/iran-vector-maps test
       - run: npm --prefix packages/iran-vector-maps-data run build
@@ -25,6 +36,10 @@ jobs:
         run: |
           npm pack ./packages/iran-vector-maps
           npm pack ./packages/iran-vector-maps-data
+      - name: Publish packages with npm trusted publishing
+        run: |
+          npm --prefix packages/iran-vector-maps publish --access public
+          npm --prefix packages/iran-vector-maps-data publish --access public
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -37,7 +52,3 @@ jobs:
           fi
           gh release upload "${GITHUB_REF_NAME}" iran-vector-maps-*.tgz --clobber --repo "${GITHUB_REPOSITORY}"
           gh release upload "${GITHUB_REF_NAME}" iran-vector-maps-data-*.tgz --clobber --repo "${GITHUB_REPOSITORY}"
-      - name: Publish packages with npm trusted publishing
-        run: |
-          npm --prefix packages/iran-vector-maps publish --access public
-          npm --prefix packages/iran-vector-maps-data publish --access public

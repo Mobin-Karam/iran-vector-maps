@@ -15,6 +15,10 @@ console.log(iranMapDataset.provinces) // 31
 
 The assets are served from the project’s GitHub Pages deployment. Pin a package version when reproducibility matters and retain attribution from the repository’s `DATA_SOURCES.md`.
 
+## Publishing
+
+Maintainers publish this package together with `iran-vector-maps` by pushing a matching `vX.Y.Z` tag. The repository release workflow uses npm trusted publishing, rather than a long-lived npm token; see the root [release policy](../../docs/RELEASE_POLICY.md).
+
 ## Load exactly one province
 
 The data companion exposes every province individually, so an application downloads only the county geometry and city points it needs. It does not invent or bundle lower-level boundaries.

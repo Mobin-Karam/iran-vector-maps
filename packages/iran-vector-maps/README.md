@@ -81,7 +81,7 @@ npm pack
 
 `npm pack` creates the same tarball users install. Review its file list before publishing.
 
-To release publicly, run `npm publish --access public` from this directory. Publishing is intentionally not performed by this repository.
+Maintainers publish from the repository by pushing a matching `vX.Y.Z` tag. The GitHub Actions workflow uses npm trusted publishing and provenance, so it does not require or store an npm token. See the root [release policy](../../docs/RELEASE_POLICY.md) for the one-time npm configuration.
 
 ## Examples and framework support
 

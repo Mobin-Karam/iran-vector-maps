@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import { readFile } from 'node:fs/promises'
 
 test('home hero gives visitors a scroll guide and opens the explorer', async ({ page }) => {
   await page.goto('')
@@ -41,7 +42,12 @@ test('data workspace imports JSON and exports valid SVG', async ({ page }) => {
   await page.getByLabel('رنگ و خروجی').click()
   const download = page.waitForEvent('download')
   await page.getByRole('button', { name: 'SVG' }).click()
-  expect((await download).suggestedFilename()).toBe('iran-administrative-map.svg')
+  const exported = await download
+  expect(exported.suggestedFilename()).toBe('iran-administrative-map.svg')
+  const content = await readFile(await exported.path(), 'utf8')
+  expect(content).toMatch(/<rect[^>]+fill="#[0-9a-f]{6}"/i)
+  const firstPathStyle = content.match(/<path[^>]+(?:fill="[^"]+"|style="[^"]*fill:\s*(?:hsl|rgb|color|#)[^"]*")/i)
+  expect(firstPathStyle).not.toBeNull()
 })
 
 test('province maps show sourced city markers and county context', async ({ page }) => {

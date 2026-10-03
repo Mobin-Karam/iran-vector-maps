@@ -548,6 +548,11 @@ function App() {
     canvas.height = HEIGHT * quality;
     const context = canvas.getContext("2d");
     if (!context) return;
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    if (format === "jpeg") {
+      context.fillStyle = "#ffffff";
+      context.fillRect(0, 0, canvas.width, canvas.height);
+    }
     const renderer = Canvg.fromString(context, new XMLSerializer().serializeToString(clone), {
       ignoreAnimation: true,
       ignoreMouse: true,

@@ -18,4 +18,13 @@ The release workflow is `.github/workflows/release.yml`. Configure this exact fi
 - Environment: leave empty unless a GitHub Environment is intentionally added to the release job.
 - Allowed action: enable direct `npm publish`.
 
-The workflow has `id-token: write`, runs on GitHub-hosted runners, and contains no npm write token. npm exchanges the GitHub OIDC identity for a short-lived publishing credential and creates provenance automatically for public packages.
+The workflow has `id-token: write`, runs on GitHub-hosted runners, and contains no npm write token. npm exchanges the GitHub OIDC identity for a short-lived publishing credential and creates provenance automatically for public packages. It uses npm 11.5+ and verifies that both package versions equal the pushed tag before it publishes; only after publishing succeeds does it create or update the GitHub Release with the packed tarballs.
+
+To release, update both package versions and changelogs, merge the release commit to `main`, then push one matching tag:
+
+```bash
+git tag vX.Y.Z
+git push origin vX.Y.Z
+```
+
+The trusted-publisher setup is a one-time npm package setting. If it has not been configured for both public packages yet, the workflow intentionally stops at the publish step instead of creating a release that claims packages were published.
