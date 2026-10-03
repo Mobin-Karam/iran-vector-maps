@@ -24,6 +24,8 @@
     "package:sync": "node scripts/sync-package-info.mjs"
   },
   "dependencies": {
+    "@fontsource-variable/vazirmatn": "^5.3.0",
+    "canvg": "^4.0.3",
     "d3-geo": "^3.1.1",
     "iran-vector-maps": "file:packages/iran-vector-maps",
     "lucide-react": "^1.49.0",

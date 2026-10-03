@@ -1,4 +1,4 @@
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft, Database, Download, Palette } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { getGeometry, getManifest, getProvinceCities, getRegions, type IranMapManifest } from '../data/loaders'
@@ -34,6 +34,7 @@ export function IranMap() {
   const [cities, setCities] = useState<ProvinceCities>()
   const [error, setError] = useState<string>()
   const [dark, setDark] = useState(false)
+  const [studioStep, setStudioStep] = useState<'data' | 'style' | 'export'>('data')
 
   useEffect(() => { getRegions().then(setRegions).catch(() => setError('فهرست مناطق در دسترس نیست.')) }, [])
   useEffect(() => { getManifest().then(setManifest).catch(() => undefined) }, [])
@@ -57,11 +58,56 @@ export function IranMap() {
 
   const exportId = `iran-map-${activeId}`
   const filenameBase = active?.level === 'county' ? `iran-county-${activeId}` : active?.level === 'province' ? `iran-province-${activeId}` : 'iran-administrative-map'
+
+  const openStudioTool = (tool: 'data' | 'style' | 'export') => {
+    setStudioStep(tool)
+    if (tool === 'data') {
+      const trigger = document.getElementById('iran-map-data-fab') as HTMLButtonElement | null
+      trigger?.click()
+    }
+    if (tool === 'style') {
+      const trigger = document.querySelector('.style-fab') as HTMLButtonElement | null
+      trigger?.click()
+    }
+    if (tool === 'export') {
+      const trigger = document.querySelector('.style-fab') as HTMLButtonElement | null
+      trigger?.click()
+    }
+  }
+
   return <SiteChrome className="map-site" showFooter={false}><main className={dark ? 'app map-app dark' : 'app map-app'}>
     <MapWorkspaceHeader regions={regions} title={mapTitle} hint={mapHint} dark={dark} onSearchSelect={(region) => { setSelectedId(region.id); navigate(regionUrl(region, regions)) }} onReset={() => navigate('/map')} onLocate={() => setSelectedId(activeId)} onThemeToggle={() => setDark(!dark)} />
     <nav className="breadcrumbs" aria-label="مسیر نقشه">{crumbs.map((crumb, index) => <span key={crumb.id}>{index > 0 && <ChevronLeft size={15} />}<button disabled={index === crumbs.length - 1} onClick={() => navigate(regionUrl(crumb, regions))}>{crumb.nameFa}</button></span>)}</nav>
     <section className="map-layout"><div className="map-card">{error ? <div className="empty"><strong>{error}</strong><button onClick={() => navigate('/map')}>بازگشت به ایران</button></div> : geometry ? <div className="map-visual"><GeoMap exportId={exportId} data={geometry} selectedId={selectedId} cities={visibleCities} onSelect={setSelectedId} onOpen={(region) => { if (region.level === 'province') navigate(`/map/province/${region.id}`) }} onHover={setHovered} onCityHover={setHoveredCity} />{(hovered || hoveredCity) && <div className="map-tooltip"><strong>{hoveredCity?.nameFa ?? hovered?.nameFa}</strong>{(hoveredCity?.nameEn ?? hovered?.nameEn) && <span>{hoveredCity?.nameEn ?? hovered?.nameEn}</span>}<small>{hoveredCity ? `شهر · شهرستان ${hoveredCity.countyNameFa} · ${hoveredCity.coordinateStatus === 'verified' ? 'مختصات تأییدشده' : 'مختصات هم‌سنجی‌شده'}` : `${levels[hovered!.level]} · برای انتخاب کلیک کنید`}</small></div>}<div className="map-count">{mapFeatureCount}</div></div> : <div className="loading">در حال آماده‌سازی نقشه…</div>}</div>
-      <aside className="details" aria-live="polite"><section className="national-reference"><div><p>نمای مرجع</p><strong>کل ایران</strong></div>{nationalGeometry && <GeoMap data={nationalGeometry} selectedId={provinceId} onSelect={setSelectedId} onOpen={(region) => { if (region.level === 'province') navigate(`/map/province/${region.id}`) }} onHover={setHovered} ariaLabel="نقشهٔ مرجع ایران" listenForMetrics={false} />}</section>{selected ? <><div className="details-top"><p className="eyebrow">{levels[selected.level]}</p><span className="live-dot" /></div><h1>{selected.nameFa}</h1>{selected.nameEn && <p className="en">{selected.nameEn}</p>}<dl><div><dt>منبع داده</dt><dd>{selected.source}</dd></div>{selected.children?.counties !== undefined && <div><dt>شهرستان‌ها</dt><dd>{selected.children.counties}</dd></div>}{selected.children?.districts !== undefined && <div><dt>بخش‌ها</dt><dd>{selected.children.districts}</dd></div>}{selected.children?.cities !== undefined && <div><dt>شهرها</dt><dd>{selected.children.cities}</dd></div>}<div><dt>سطح</dt><dd>{levels[selected.level]}</dd></div></dl>{selected.level === 'province' && <button className="primary" onClick={() => navigate(regionUrl(selected, regions))}>نمایش نقشهٔ شهرستان‌ها <ChevronLeft size={17} /></button>}{selected.level === 'county' && <p className="notice">جزئیات بخش‌ها و شهرها از منبع رسمی به‌روز است. مرز SVG آن‌ها پس از تأیید هندسی افزوده می‌شود.</p>}<RegionInstallCopy region={selected} regions={regions} /></> : <div className="welcome"><span className="radar" /><strong>کاوش نقشه</strong><p>برای شروع، یک استان را انتخاب کنید.</p></div>}<section className="map-how"><strong>روش استفاده</strong><ol><li>استان را از نقشهٔ مرجع انتخاب کنید.</li><li>شهرستان و نشانگرهای شهر را در فضای اصلی ببینید.</li><li>دادهٔ خود را با شناسهٔ منطقه وارد کنید.</li></ol></section></aside></section>
+      <aside className="details" aria-live="polite">
+        <div className="studio-sidebar">
+          <div className="studio-step-tabs" role="tablist" aria-label="مراحل کار">
+            <button className={studioStep === 'data' ? 'is-active' : ''} type="button" onClick={() => openStudioTool('data')}><Database size={16} /> داده</button>
+            <button className={studioStep === 'style' ? 'is-active' : ''} type="button" onClick={() => openStudioTool('style')}><Palette size={16} /> طراحی</button>
+            <button className={studioStep === 'export' ? 'is-active' : ''} type="button" onClick={() => openStudioTool('export')}><Download size={16} /> خروجی</button>
+          </div>
+          <div className="studio-panel-card">
+            {studioStep === 'data' && <>
+              <p className="studio-kicker">داده</p>
+              <h3>ورود داده به نقشه</h3>
+              <p>JSON، CSV یا Excel را بارگذاری کنید و هر ردیف را به منطقهٔ درست وصل کنید.</p>
+              <button className="studio-primary" type="button" onClick={() => openStudioTool('data')}>باز کردن فضای داده</button>
+            </>}
+            {studioStep === 'style' && <>
+              <p className="studio-kicker">طراحی</p>
+              <h3>رنگ و برچسب‌ها</h3>
+              <p>پالت آماده را انتخاب کنید یا رنگ‌ها را دستی تنظیم کنید و برچسب‌ها را در صورت نیاز مخفی کنید.</p>
+              <button className="studio-primary" type="button" onClick={() => openStudioTool('style')}>باز کردن رنگ‌ها</button>
+            </>}
+            {studioStep === 'export' && <>
+              <p className="studio-kicker">خروجی</p>
+              <h3>دریافت تصویر نهایی</h3>
+              <p>با کیفیت موردنظر PNG یا JPG را استخراج کنید و در یک کلیک آمادهٔ به‌اشتراک‌گذاری کنید.</p>
+              <button className="studio-primary" type="button" onClick={() => openStudioTool('export')}>باز کردن خروجی</button>
+            </>}
+          </div>
+        </div>
+        <section className="national-reference"><div><p>نمای مرجع</p><strong>کل ایران</strong></div>{nationalGeometry && <GeoMap data={nationalGeometry} selectedId={provinceId} onSelect={setSelectedId} onOpen={(region) => { if (region.level === 'province') navigate(`/map/province/${region.id}`) }} onHover={setHovered} ariaLabel="نقشهٔ مرجع ایران" listenForMetrics={false} />}</section>{selected ? <><div className="details-top"><p className="eyebrow">{levels[selected.level]}</p><span className="live-dot" /></div><h1>{selected.nameFa}</h1>{selected.nameEn && <p className="en">{selected.nameEn}</p>}<dl><div><dt>منبع داده</dt><dd>{selected.source}</dd></div>{selected.children?.counties !== undefined && <div><dt>شهرستان‌ها</dt><dd>{selected.children.counties}</dd></div>}{selected.children?.districts !== undefined && <div><dt>بخش‌ها</dt><dd>{selected.children.districts}</dd></div>}{selected.children?.cities !== undefined && <div><dt>شهرها</dt><dd>{selected.children.cities}</dd></div>}<div><dt>سطح</dt><dd>{levels[selected.level]}</dd></div></dl>{selected.level === 'province' && <button className="primary" onClick={() => navigate(regionUrl(selected, regions))}>نمایش نقشهٔ شهرستان‌ها <ChevronLeft size={17} /></button>}{selected.level === 'county' && <p className="notice">جزئیات بخش‌ها و شهرها از منبع رسمی به‌روز است. مرز SVG آن‌ها پس از تأیید هندسی افزوده می‌شود.</p>}<RegionInstallCopy region={selected} regions={regions} /></> : <div className="welcome"><span className="radar" /><strong>کاوش نقشه</strong><p>برای شروع، یک استان را انتخاب کنید.</p></div>}<section className="map-how"><strong>روش استفاده</strong><ol><li>استان را از نقشهٔ مرجع انتخاب کنید.</li><li>شهرستان و نشانگرهای شهر را در فضای اصلی ببینید.</li><li>دادهٔ خود را با شناسهٔ منطقه وارد کنید.</li></ol></section></aside></section>
     <footer className="map-attribution"><span><i className="dot capital" /> انتخاب‌شده</span><span><i className="dot" /> مرز اداری واقعی</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">© مشارکت‌کنندگان OpenStreetMap</a></footer><SampleDownload /><MapStyleExport exportId={exportId} filenameBase={filenameBase} mapLabel={active?.nameFa ?? 'ایران'} /><DataWorkspace regions={regions} />
   </main></SiteChrome>
 }

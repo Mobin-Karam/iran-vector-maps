@@ -9,3 +9,4 @@ packages/*/node_modules/
 packages/*/dist/
 test-results/
 playwright-report/
+iran-map-studio-forked/

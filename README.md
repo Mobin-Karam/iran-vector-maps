@@ -96,6 +96,7 @@ Sources, attribution, scope, and known limits are documented in [DATA_SOURCES.md
 
 - [Package API and release notes](packages/iran-vector-maps/README.md)
 - [Iran Map Studio audit and integration plan](docs/IRAN_MAP_STUDIO_AUDIT_AND_INTEGRATION.md)
+- [Studio UI/UX integration plan for the map page](docs/MAP_STUDIO_UI_PLAN.md)
 - [Data-overlay import contract](docs/ADDING_DATA_OVERLAYS.md)
 - [Customization guide](docs/CUSTOMIZING_THE_MAP.md)
 - [AI and application integration](docs/AI_AGENT_INTEGRATION.md)
