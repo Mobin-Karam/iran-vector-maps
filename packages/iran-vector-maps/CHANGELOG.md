@@ -2,6 +2,12 @@
 
 This changelog follows the package version in `package.json`. Unreleased changes belong under a future version heading and are not advertised as published until `npm publish` succeeds.
 
+## 0.5.3 — 2026-10-03
+
+- Made exported SVG files self-contained by writing explicit, portable region fill and border attributes.
+- Ensured PNG and JPG exports start from a cleared canvas, with an intentional white JPG background.
+- Added browser coverage for exported map paint data and documented trusted GitHub Actions publishing.
+
 ## 0.5.2 — 2026-10-02
 
 - Preserved active imported metrics across asynchronous map-layer mounting, including slow browser and CI starts.

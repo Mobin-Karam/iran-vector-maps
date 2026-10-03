@@ -1,5 +1,13 @@
 [
   {
+    "version": "0.5.3",
+    "date": "2026-10-03",
+    "titleFa": "خروجی‌های رنگی و انتشار قابل اعتماد",
+    "titleEn": "Portable colored exports and reliable publishing",
+    "itemsFa": ["خروجی SVG با رنگ و مرز صریح", "خروجی PNG و JPG با پس‌زمینهٔ کنترل‌شده", "انتشار npm از GitHub Actions با Trusted Publishing"],
+    "itemsEn": ["SVG exports with explicit fills and borders", "PNG and JPG exports with intentional canvas backgrounds", "npm publishing from GitHub Actions with trusted publishing"]
+  },
+  {
     "version": "0.4.1",
     "date": "2026-10-02",
     "titleFa": "تأیید تعامل نقطهٔ شهر",
