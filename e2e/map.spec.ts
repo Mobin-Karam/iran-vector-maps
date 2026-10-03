@@ -77,3 +77,13 @@ test('studio provides the full client-side data, style, and export workflow', as
   await page.locator('.studio-step-tabs button').filter({ hasText: 'خروجی' }).click()
   await expect(page.getByRole('dialog', { name: 'رنگ و خروجی نقشه' })).toBeVisible()
 })
+
+test('studio templates and project snapshots use the production map data flow', async ({ page }) => {
+  await page.goto('studio')
+  await page.getByRole('tab', { name: 'قالب‌ها' }).click()
+  await page.getByRole('button', { name: /جمعیت و تولد/ }).click()
+  await expect(page.locator('.metric-label')).toHaveCount(31)
+  await page.getByRole('tab', { name: 'پروژه‌ها' }).click()
+  await page.getByRole('button', { name: 'ذخیرهٔ نسخهٔ فعلی' }).click()
+  await expect(page.locator('.project-list')).toContainText('نقشهٔ من')
+})

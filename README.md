@@ -103,6 +103,7 @@ Sources, attribution, scope, and known limits are documented in [DATA_SOURCES.md
 - [Map-data update workflow](docs/UPDATING_MAP_DATA.md)
 - [Province-level asset loading](docs/PROVINCE_ASSETS.md)
 - [Routing, slugs, and stable identifiers](docs/ROUTING_AND_IDENTIFIERS.md)
+- [Studio workspace and game-layer capability](docs/WORKSPACE_AND_GAME.md)
 - [Implemented and planned package features](docs/PACKAGE_FEATURES.md)
 - [Reliability, coverage, and correction policy](docs/RELIABILITY.md)
 - [Release and versioning policy](docs/RELEASE_POLICY.md)

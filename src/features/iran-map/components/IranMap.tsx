@@ -12,6 +12,7 @@ import { SampleDownload } from './SampleDownload'
 import { MapStyleExport } from './MapStyleExport'
 import { MapWorkspaceHeader } from './MapWorkspaceHeader'
 import { RegionInstallCopy } from './RegionInstallCopy'
+import { StudioWorkspaceKit } from './StudioWorkspaceKit'
 import './tooltip.css'
 import './map-ui.css'
 import './map-centered.css'
@@ -105,6 +106,7 @@ export function IranMap({ workspace = 'explorer' }: { workspace?: 'explorer' | '
         </div>
         <section className="national-reference"><div><p>نمای مرجع</p><strong>کل ایران</strong></div>{nationalGeometry && <GeoMap data={nationalGeometry} selectedId={province?.id} onSelect={setSelectedId} onOpen={(region) => { const matching = regions.find((item) => item.id === region.id); if (matching) navigate(regionUrl(matching, regions)) }} onHover={setHovered} ariaLabel="نقشهٔ مرجع ایران" listenForMetrics={false} />}</section>
         {selected ? <section className="region-summary"><div className="details-top"><p className="eyebrow">{levels[selected.level]}</p><span className="live-dot" /></div><h2>{selected.nameFa}</h2>{selected.nameEn && <p className="en">{selected.nameEn}</p>}<dl><div><dt>منبع داده</dt><dd>{selected.source}</dd></div>{selected.children?.counties !== undefined && <div><dt>شهرستان‌ها</dt><dd>{selected.children.counties}</dd></div>}{selected.children?.cities !== undefined && <div><dt>شهرها</dt><dd>{selected.children.cities}</dd></div>}</dl>{selected.level === 'province' && <button className="primary" onClick={() => navigate(regionUrl(selected, regions))}>نمایش شهرستان‌ها <ChevronLeft size={17} /></button>}<RegionInstallCopy region={selected} regions={regions} /></section> : <div className="welcome"><span className="radar" /><strong>کاوش نقشه</strong><p>برای شروع، یک استان را انتخاب کنید.</p></div>}
+        {isStudio && <StudioWorkspaceKit regions={regions} />}
       </aside>
       <section className="map-card studio-preview-column" aria-label="پیش‌نمایش نقشه">
         <header className="map-preview-toolbar"><div><p>{province ? 'نمای شهرستان‌ها' : 'نمای ملی'}</p><strong>{mapTitle}</strong></div><span>{mapFeatureCount}</span></header>

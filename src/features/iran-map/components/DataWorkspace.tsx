@@ -20,9 +20,20 @@ export function DataWorkspace({ regions }: { regions: AdministrativeRegion[] }) 
   const labels = useMemo(() => [...new Set(records.map((record) => record.labelFa))], [records])
   const effectiveActiveLabel = labels.includes(activeLabel) ? activeLabel : labels[0] ?? ''
   const published = useMemo(() => effectiveActiveLabel ? records.filter((record) => record.labelFa === effectiveActiveLabel) : records, [effectiveActiveLabel, records])
-  useEffect(() => { publish(published) }, [published])
-  useEffect(() => { if (!open) return; const previous = document.body.style.overflow; const returnFocus = trigger.current; document.body.style.overflow = 'hidden'; dialog.current?.focus(); const keydown = (event: KeyboardEvent) => { if (event.key === 'Escape') setOpen(false) }; window.addEventListener('keydown', keydown); return () => { document.body.style.overflow = previous; window.removeEventListener('keydown', keydown); returnFocus?.focus() } }, [open])
   const save = (next: RegionMetric[]) => { setRecords(next); localStorage.setItem(storageKey, JSON.stringify(next)) }
+  useEffect(() => { publish(published) }, [published])
+  useEffect(() => {
+    const loadWorkspaceRecords = (event: Event) => {
+      const incoming = (event as CustomEvent<RegionMetric[]>).detail
+      if (!Array.isArray(incoming)) return
+      save(incoming)
+      setActiveLabel(incoming[0]?.labelFa ?? '')
+      setImportSummary(`${incoming.length.toLocaleString('fa-IR')} رکورد از فضای کاری بارگذاری شد.`)
+    }
+    window.addEventListener('iran-map:workspace-records', loadWorkspaceRecords)
+    return () => window.removeEventListener('iran-map:workspace-records', loadWorkspaceRecords)
+  }, [])
+  useEffect(() => { if (!open) return; const previous = document.body.style.overflow; const returnFocus = trigger.current; document.body.style.overflow = 'hidden'; dialog.current?.focus(); const keydown = (event: KeyboardEvent) => { if (event.key === 'Escape') setOpen(false) }; window.addEventListener('keydown', keydown); return () => { document.body.style.overflow = previous; window.removeEventListener('keydown', keydown); returnFocus?.focus() } }, [open])
   const upsert = (incoming: RegionMetric[]) => { const base = mode === 'replace' ? [] : records; const next = new Map(base.map((record) => [metricKey(record), record])); incoming.forEach((record) => next.set(metricKey(record), record)); save([...next.values()]); publish(incoming); setActiveLabel(incoming[0]?.labelFa ?? activeLabel); setImportSummary(`${incoming.length.toLocaleString('fa-IR')} رکورد ${mode === 'replace' ? 'جایگزین' : 'ثبت یا به‌روزرسانی'} شد.`); setImportError('') }
   const add = () => { const numeric = Number(toLatinNumber(value)); if (!regionId || !label.trim() || !Number.isFinite(numeric) || !source.trim()) return; upsert([{ regionId, metricId: crypto.randomUUID(), labelFa: label.trim(), value: numeric, unitFa: unit.trim() || undefined, source: source.trim(), observedAt: new Date().toISOString() }]); setValue(''); setLabel(''); setUnit(''); setSource('') }
   const importFile = async (file?: File) => { if (!file) return; try {
