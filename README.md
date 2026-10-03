@@ -119,5 +119,5 @@ The application and package source code are available under the [MIT License](LI
 Every Git tag matching `v*` runs the release workflow. It validates the reusable package, creates the installable `iran-vector-maps-<version>.tgz` artifact, and attaches it to the corresponding GitHub Release. Install a release artifact directly when npm is not part of your delivery flow:
 
 ```bash
-npm install https://github.com/Mobin-Karam/iran-vector-maps/releases/download/v0.5.3/iran-vector-maps-0.5.3.tgz
+npm install https://github.com/Mobin-Karam/iran-vector-maps/releases/download/v0.5.4/iran-vector-maps-0.5.4.tgz
 ```

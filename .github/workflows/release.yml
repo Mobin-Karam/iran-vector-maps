@@ -36,10 +36,12 @@ jobs:
         run: |
           npm pack ./packages/iran-vector-maps
           npm pack ./packages/iran-vector-maps-data
-      - name: Publish packages with npm trusted publishing
-        run: |
-          npm --prefix packages/iran-vector-maps publish --access public
-          npm --prefix packages/iran-vector-maps-data publish --access public
+      - name: Publish iran-vector-maps with npm trusted publishing
+        working-directory: packages/iran-vector-maps
+        run: npm publish --access public
+      - name: Publish iran-vector-maps-data with npm trusted publishing
+        working-directory: packages/iran-vector-maps-data
+        run: npm publish --access public
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ github.token }}

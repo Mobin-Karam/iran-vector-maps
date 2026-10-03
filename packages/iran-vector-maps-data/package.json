@@ -1,6 +1,6 @@
 {
   "name": "iran-vector-maps-data",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Versioned Iran administrative map data manifest and static-asset helpers for iran-vector-maps.",
   "repository": {
     "type": "git",
